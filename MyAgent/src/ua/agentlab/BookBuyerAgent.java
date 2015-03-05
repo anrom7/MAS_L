@@ -18,7 +18,9 @@ public class BookBuyerAgent extends Agent {
 	// The title of the book to buy
 	private String targetBookTitle;
 	// The list of known seller agents
-	private AID[] sellerAgents;
+	private AID[] sellerAgents = {new AID("seller1", AID.ISLOCALNAME),
+			new AID("seller2", AID.ISLOCALNAME)};
+
 
 	// Put agent initializations here
 	protected void setup() {
@@ -29,7 +31,7 @@ public class BookBuyerAgent extends Agent {
 		Object[] args = getArguments();
 		if (args != null && args.length > 0) {
 			targetBookTitle = (String) args[0];
-			System.out.println("Target book is "+targetBookTitle);
+			System.out.println("Trying to buy  "+targetBookTitle);
 
 			// Add a TickerBehaviour that schedules a request to seller agents every minute
 			addBehaviour(new TickerBehaviour(this, 60000) {
