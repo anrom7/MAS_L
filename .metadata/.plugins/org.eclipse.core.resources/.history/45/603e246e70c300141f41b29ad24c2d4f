@@ -20,9 +20,6 @@ public class BookBuyerAgent extends Agent {
 	// The list of known seller agents
 	private AID[] sellerAgents = {new AID("seller1", AID.ISLOCALNAME),
 			new AID("seller2", AID.ISLOCALNAME)};
-	String nickname = "Peter";
-	AID id = new AID(nickname, AID.ISLOCALNAME);
-
 
 
 	// Put agent initializations here
@@ -75,23 +72,6 @@ public class BookBuyerAgent extends Agent {
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	// Put agent clean-up operations here
 	protected void takeDown() {
 		// Printout a dismissal message

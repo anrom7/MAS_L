@@ -163,8 +163,6 @@ public class BookSellerAgent extends Agent {
 			}
 		}
 	}  // End of inner class OfferRequestsServer
-	
-	
 }
 
 

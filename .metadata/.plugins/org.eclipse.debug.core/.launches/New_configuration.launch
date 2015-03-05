@@ -7,6 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="jade.Boot"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-gui  buyer:ua.agentlab.BookBuyerAgent(The-Lord-of-the-rings)"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-gui  buyer:ua.agentlab.BookBuyerAgent"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="MyAgent"/>
 </launchConfiguration>
