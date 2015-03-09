@@ -1,0 +1,34 @@
+Mar 10, 2015 12:11:11 AM jade.core.Runtime beginContainer
+INFO: ----------------------------------
+    This is JADE 4.2.0 - revision 6574 of 2012/06/20 15:38:00
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+----------------------------------------
+Retrieving CommandDispatcher for platform null
+Mar 10, 2015 12:11:11 AM jade.imtp.leap.LEAPIMTPManager initialize
+INFO: Listening for intra-platform commands on address:
+- jicp://127.0.0.1:1099
+
+Mar 10, 2015 12:11:12 AM jade.core.BaseService init
+INFO: Service jade.core.management.AgentManagement initialized
+Mar 10, 2015 12:11:12 AM jade.core.BaseService init
+INFO: Service jade.core.messaging.Messaging initialized
+Mar 10, 2015 12:11:12 AM jade.core.BaseService init
+INFO: Service jade.core.resource.ResourceManagement initialized
+Mar 10, 2015 12:11:12 AM jade.core.BaseService init
+INFO: Service jade.core.mobility.AgentMobility initialized
+Mar 10, 2015 12:11:12 AM jade.core.BaseService init
+INFO: Service jade.core.event.Notification initialized
+Mar 10, 2015 12:11:12 AM jade.mtp.http.HTTPServer <init>
+INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Mar 10, 2015 12:11:12 AM jade.core.messaging.MessagingService boot
+INFO: MTP addresses:
+http://HOME-PC:7778/acc
+Mar 10, 2015 12:11:12 AM jade.core.AgentContainerImpl joinPlatform
+INFO: --------------------------------------
+Agent container Main-Container@127.0.0.1 is ready.
+--------------------------------------------
+Hello World, my name is : Ping@127.0.0.1:1099/JADE
+ – Pong received: Ping
+ – Ping received: Pong
+ – Ping received: Ping

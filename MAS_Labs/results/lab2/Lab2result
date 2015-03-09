@@ -1,0 +1,56 @@
+Mar 10, 2015 12:00:09 AM jade.core.Runtime beginContainer
+INFO: ----------------------------------
+    This is JADE 4.2.0 - revision 6574 of 2012/06/20 15:38:00
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+----------------------------------------
+Retrieving CommandDispatcher for platform null
+Mar 10, 2015 12:00:09 AM jade.imtp.leap.LEAPIMTPManager initialize
+INFO: Listening for intra-platform commands on address:
+- jicp://127.0.0.1:1099
+
+Mar 10, 2015 12:00:10 AM jade.core.BaseService init
+INFO: Service jade.core.management.AgentManagement initialized
+Mar 10, 2015 12:00:10 AM jade.core.BaseService init
+INFO: Service jade.core.messaging.Messaging initialized
+Mar 10, 2015 12:00:10 AM jade.core.BaseService init
+INFO: Service jade.core.resource.ResourceManagement initialized
+Mar 10, 2015 12:00:10 AM jade.core.BaseService init
+INFO: Service jade.core.mobility.AgentMobility initialized
+Mar 10, 2015 12:00:10 AM jade.core.BaseService init
+INFO: Service jade.core.event.Notification initialized
+Mar 10, 2015 12:00:10 AM jade.mtp.http.HTTPServer <init>
+INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Mar 10, 2015 12:00:10 AM jade.core.messaging.MessagingService boot
+INFO: MTP addresses:
+http://HOME-PC:7778/acc
+Mar 10, 2015 12:00:11 AM jade.core.AgentContainerImpl joinPlatform
+INFO: --------------------------------------
+Agent container Main-Container@127.0.0.1 is ready.
+--------------------------------------------
+Hello! Buyer-agent Buyer2@127.0.0.1:1099/JADE is ready.
+Hello! Buyer-agent Buyer1@127.0.0.1:1099/JADE is ready.
+title1 inserted into catalogue. Price = 125
+title1 inserted into catalogue. Price = 123
+title2 inserted into catalogue. Price = 22
+title2 inserted into catalogue. Price = 35
+title5 inserted into catalogue. Price = 25
+Added book title1
+Added book title5
+title1 sold to agent Buyer1@127.0.0.1:1099/JADE
+title5 sold to agent Buyer1@127.0.0.1:1099/JADE
+title5 successfully purchased.
+Price = 25
+title1 successfully purchased.
+Price = 123
+Added book title2
+title2 sold to agent Buyer2@127.0.0.1:1099/JADE
+title2 successfully purchased.
+Price = 22
+title1 sold to agent Buyer1@127.0.0.1:1099/JADE
+title1 successfully purchased.
+Price = 125
+title2 sold to agent Buyer2@127.0.0.1:1099/JADE
+title2 successfully purchased.
+Price = 35
+
