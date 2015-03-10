@@ -1,1 +1,1 @@
-http://My.connectify:7778/acc
+http://My:7778/acc
