@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="DFAgentDescription template " key="selection"/>
+		<item value="" key="selection"/>
 		<list key="findhistory">
+			<item value="msg.setOntology"/>
+			<item value="Ticker"/>
+			<item value="DF"/>
+			<item value="Hashtable"/>
+			<item value="H"/>
 			<item value="DFAgentDescription template "/>
 			<item value="book-selling"/>
 			<item value="RequestPerformer"/>
-			<item value="// Message received. Process it"/>
-			<item value="void action"/>
-			<item value="not-available"/>
-			<item value="// Message carrying a request for offer"/>
-			<item value="MyAgent"/>
 		</list>
 		<list key="replacehistory">
 		</list>

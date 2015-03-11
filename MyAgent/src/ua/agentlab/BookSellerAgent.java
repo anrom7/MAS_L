@@ -10,13 +10,19 @@ import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 
 import java.util.*;
+import jade.content.lang.Codec; 
 
+import jade.content.onto.*;
+import jade.content.lang.sl.SLCodec;
 
 public class BookSellerAgent extends Agent {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -3918119750762462404L;
+	private Codec codec = new SLCodec();
+	private Ontology ontology = BookTradingOntology.getInstance();
+
 	// The catalogue of books for sale (maps the title of a book to its price)
 	private ArrayList<Book> catalogue;
 	// The GUI by means of which the user can add books in the catalogue
@@ -24,6 +30,10 @@ public class BookSellerAgent extends Agent {
 
 	// Put agent initializations here
 	protected void setup() {
+		
+		getContentManager().registerLanguage(codec); 
+		getContentManager().registerOntology(ontology);
+		
 		// Create the catalogue
 		catalogue = new ArrayList<Book>();
 
