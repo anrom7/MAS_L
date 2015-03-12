@@ -33,10 +33,8 @@ public class BookSellerAgent extends Agent {
 					//go loop with step = 2, every element that x/2 residual = 0 - it's title,
 					//and x/2 residual = 1 - it's price
 					for(int i=0;i<args.length;i=i+2){
-						//adding to catalogue HashTable
-						catalogue.put(args[i].toString(), new Integer(args[i+1].toString()));
-						//writing console what book was added
-						System.out.println(args[i].toString()+" inserted into catalogue. Price = "+args[i+1].toString());
+						//call update catalogue method to add new books from arguments
+						updateCatalogue(args[i].toString(),new Integer(args[i+1].toString()));
 						}
 					}
 		// Create and show the GUI 
@@ -94,6 +92,24 @@ public class BookSellerAgent extends Agent {
 				System.out.println(title+" inserted into catalogue. Price = "+price);
 			}
 		} );
+		
+		//Behaviour by time - it's mean that handler would be catch just with time delay in ctor
+		addBehaviour(new WakerBehaviour(this, 10000) {
+			//Handler that will catch only once, after timeout is over
+			protected void handleElapsedTimeout() {
+				//Getting price of book by title from catalogue
+				Integer price = (Integer) catalogue.get(title);
+				//check if price equal null - that means that book've already sold.
+				if (price!=null)
+				{
+					//change price in catalogue (as it hashtable we could just put value in it
+					//and if there any element with same key - that would be replaced with new value)
+					catalogue.put(title,(int)Math.round(price*0.7));
+					//message about sale :)
+					System.out.println("Price of "+title+" was down on 30%. Now it costs just "+catalogue.get(title));
+				}
+			}
+			} );
 	}
 
 	/**

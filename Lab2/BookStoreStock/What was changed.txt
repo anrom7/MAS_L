@@ -1,4 +1,7 @@
-It's a stock ver. of app.
+Book store app with changes:
 
-Was changed just initializer in BookSellerAgent to handle arguments. Was used such arguments string: 
--gui HadzeraIhorSeller:ua.agentlab.BookSellerAgent(Hobbit,5,Hobbit2,7);HadzeraMariaBuyer:ua.agentlab.BookBuyerAgent(Hobbit)
+Was implemented feature when book haven't been sold by 10 seconds - then price of it low on 30%. Such a sale.
+
+Was added WakerBehaviour behaviour with handleElapsedTimeout handler, that catching once, when timeout is over.
+
+Also was changed timeout of WorkerBuyer request from 6 seconds to 2 seconds - it's shorting time of debugging.
