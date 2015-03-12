@@ -1,0 +1,4 @@
+It's a stock ver. of app.
+
+Was changed just initializer in BookSellerAgent to handle arguments. Was used such arguments string: 
+-gui HadzeraIhorSeller:ua.agentlab.BookSellerAgent(Hobbit,5,Hobbit2,7);HadzeraMariaBuyer:ua.agentlab.BookBuyerAgent(Hobbit)
