@@ -1,1 +1,1 @@
-http://192.168.1.179:7778/acc
+http://Vasiok-PC:7778/acc
