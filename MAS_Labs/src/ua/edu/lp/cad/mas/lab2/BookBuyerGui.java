@@ -21,6 +21,11 @@ import javax.swing.table.AbstractTableModel;
 
 import ua.edu.lp.cad.mas.lab2.BookBuyerAgent.BookHandler;
 
+/*
+ * Реалізація графічного інтерфейсу для агента покупця
+ * 
+ * */
+
 public class BookBuyerGui extends JFrame {
 	private static final long serialVersionUID = 1331346802753304828L;
 
@@ -48,6 +53,7 @@ public class BookBuyerGui extends JFrame {
 		addButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent ev) {
 				try {
+					// Додавання нової книги в чергу для покупки
 					String title = titleField.getText().trim();
 					booksModel.addBook(title);
 					titleField.setText("");
@@ -82,6 +88,11 @@ public class BookBuyerGui extends JFrame {
 		setLocation(centerX - getWidth() / 2, centerY - getHeight() / 2);
 		super.setVisible(true);
 	}
+	
+	/*
+	 * Модель яка відповідає за відображення списку
+	 * усіх книг які повинен купити покупець
+	 * */
 	
 	private class BooksModel extends AbstractTableModel {
 		private static final long serialVersionUID = -1563735225238755621L;

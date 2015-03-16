@@ -17,13 +17,14 @@ import jade.lang.acl.MessageTemplate;
 public class BookBuyerAgent extends Agent {
 	private static final long serialVersionUID = -6300630449468161409L;
 
-	// The title of the book to buy
+	// The titles list of the books to buy
 	private List<String> targetBookTitles = new ArrayList<String>();
 	// The list of known seller agents
 	private AID[] sellerAgents = null;
 	
 	private BookBuyerGui gui = null;
 	
+	// Набір слухачів
 	private List<BookHandler> bookHandlers = new ArrayList<BookBuyerAgent.BookHandler>();
 
 	// Put agent initializations here
@@ -34,7 +35,7 @@ public class BookBuyerAgent extends Agent {
 		
 		System.out.println("Hello! Buyer-agent " + getAID().getName() + " is ready.");
 		
-		addBehaviour(new TickerBehaviour(this, 15000) {
+		addBehaviour(new TickerBehaviour(this, 60000) {
 			private static final long serialVersionUID = -2539521521322352923L;
 
 			protected void onTick() {
@@ -55,6 +56,7 @@ public class BookBuyerAgent extends Agent {
 					fe.printStackTrace();
 				}
 				
+				// Пошук по усіх книгах
 				for (String title : targetBookTitles) {
 					myAgent.addBehaviour(new RequestPerformer(title));
 				}
@@ -62,16 +64,19 @@ public class BookBuyerAgent extends Agent {
 		});
 	}
 	
+	// Додавання книги в список
 	public void addBook(String title) {
 		System.out.println("Added book " + title);
 		
 		targetBookTitles.add(title);
 	}
 	
+	// Добавляє слухача для відслідковування змін 
 	public void addBookHandler(BookHandler bookHandler) {
 		this.bookHandlers.add(bookHandler);
 	}
 	
+	// Видалення слухача
 	public void removeBookHandler(BookHandler bookHandler) {
 		this.bookHandlers.remove(bookHandler);
 	}
@@ -85,6 +90,7 @@ public class BookBuyerAgent extends Agent {
 		private MessageTemplate mt; // The template to receive replies
 		private int step = 0;
 
+		// Дане поле призначене для зберігання назви книги яку потрібно купити в даній поведінці
 		public String targetBookTitle = null;
 		
 		public RequestPerformer(String targetBookTitle) {
@@ -159,6 +165,7 @@ public class BookBuyerAgent extends Agent {
 						// Purchase successful. We can terminate
 						System.out.println(targetBookTitle + " successfully purchased.");
 						
+						// Повідомляємо усіх слухачів про зміну в наборі книжок
 						for (BookHandler handler : bookHandlers) {
 							handler.onBookBay(targetBookTitle);
 						}
@@ -185,7 +192,12 @@ public class BookBuyerAgent extends Agent {
 		super.takeDown();
 	}
 
+	/*
+	 * BookHandler призначений для повідомлення графічних інтерфейсів про
+	 * зміну набору книжок, які потрібно купити
+	 * */
+	
 	public interface BookHandler {
-		public void onBookBay(String title);
+		public void onBookBay(String title); // Повідомляє про видалення назви книги
 	}
 }
