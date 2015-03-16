@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="30" version="2.0">
+<workbench progressCount="28" version="2.0">
 <workbenchAdvisor/>
 <window height="560" maximized="true" width="722" x="-119" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -35,30 +35,44 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookBuyerAgent.java" partName="BookBuyerAgent.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/BookBuyerAgent.java" title="BookBuyerAgent.java" tooltip="MyAgent/src/ua/agentlab/BookBuyerAgent.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/BookBuyerAgent.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5676" selectionTopPixel="2533"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerAgent.java" partName="BookSellerAgent.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/BookSellerAgent.java" title="BookSellerAgent.java" tooltip="MyAgent/src/ua/agentlab/BookSellerAgent.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5152" selectionTopPixel="1035"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerGui.java" partName="BookSellerGui.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/BookSellerGui.java" title="BookSellerGui.java" tooltip="MyAgent/src/ua/agentlab/BookSellerGui.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/BookSellerGui.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="568" selectionTopPixel="225"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Book.java" partName="Book.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/Book.java" title="Book.java" tooltip="MyAgent/src/ua/agentlab/Book.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/Book.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="147" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Boook.java" partName="Boook.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/Boook.java" title="Boook.java" tooltip="MyAgent/src/ua/agentlab/Boook.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/Boook.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="151" selectionTopPixel="120"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookTradingOntology.java" partName="BookTradingOntology.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/BookTradingOntology.java" title="BookTradingOntology.java" tooltip="MyAgent/src/ua/agentlab/BookTradingOntology.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/BookTradingOntology.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="19" selectionOffset="108" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Costs.java" partName="Costs.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/Costs.java" title="Costs.java" tooltip="MyAgent/src/ua/agentlab/Costs.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/Costs.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="5" selectionOffset="81" selectionTopPixel="41"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sell.java" partName="Sell.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/Sell.java" title="Sell.java" tooltip="MyAgent/src/ua/agentlab/Sell.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/Sell.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="76" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerAgent.java" partName="BookSellerAgent.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/MyAgent/src/ua/agentlab/BookSellerAgent.java" title="BookSellerAgent.java" tooltip="MyAgent/src/ua/agentlab/BookSellerAgent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="15" selectionOffset="481" selectionTopPixel="30"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -109,7 +123,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
@@ -199,8 +213,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.1816387" ratioLeft="184" ratioRight="829" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.32964602" ratioLeft="149" ratioRight="303" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.2744324" ratioLeft="278" ratioRight="735" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.92477876" ratioLeft="418" ratioRight="34" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -241,127 +255,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookBuyerAgent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookBuyerAgent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookSellerGui.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookBuyerAgent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/Book.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookBuyerAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/Boook.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookTradingOntology.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookTradingVocabulary.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/Costs.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/Sell.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
 </editors>
-<item historyLabel="BookBuyerAgent.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="0">
-<position info="not_deleted" x="2670" y="0"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="0">
-<position info="not_deleted" x="1404" y="0"/>
-</item>
-<item historyLabel="BookSellerAgent.java" index="1">
-<position info="not_deleted" x="2365" y="0"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="0">
-<position info="not_deleted" x="787" y="0"/>
-</item>
-<item historyLabel="BookSellerAgent.java" index="1">
-<position info="not_deleted" x="2365" y="0"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="0">
-<position info="not_deleted" x="1171" y="0"/>
-</item>
-<item historyLabel="BookSellerAgent.java" index="1">
-<position info="not_deleted" x="5068" y="1"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="0">
+<item historyLabel="BookTradingOntology.java" index="1">
 <position/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="1">
-<position info="not_deleted" x="942" y="12"/>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="268" y="0"/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="0">
-<position info="not_deleted" x="1209" y="0"/>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="151" y="5"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="1">
-<position info="not_deleted" x="1775" y="0"/>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="403" y="0"/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="0">
-<position info="not_deleted" x="2311" y="0"/>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="151" y="5"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="1">
-<position info="not_deleted" x="1775" y="0"/>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="1">
-<position info="not_deleted" x="2235" y="40"/>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="2">
-<position info="not_deleted" x="2311" y="0"/>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="151" y="5"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="3">
-<position info="not_deleted" x="378" y="15"/>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
 </item>
-<item historyLabel="BookSellerGui.java" index="4">
+<item historyLabel="BookTradingVocabulary.java" index="2">
+<position/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
+</item>
+<item historyLabel="Costs.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="BookSellerGui.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="59" y="0"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="81" y="5"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="295" y="0"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="81" y="5"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="499" y="0"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="339" y="0"/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
+</item>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="297" y="0"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="339" y="0"/>
+</item>
+<item historyLabel="Sell.java" index="4">
+<position info="not_deleted" x="387" y="0"/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
+</item>
+<item historyLabel="BookTradingVocabulary.java" index="2">
+<position/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position info="not_deleted" x="603" y="0"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="339" y="0"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="81" y="5"/>
+</item>
+<item historyLabel="Sell.java" index="4">
+<position info="not_deleted" x="387" y="0"/>
+</item>
+<item historyLabel="Sell.java" index="4">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="81" y="5"/>
 </item>
 <item historyLabel="BookSellerAgent.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="466" y="0"/>
+</item>
+<item historyLabel="Sell.java" index="4">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position info="not_deleted" x="24" y="27"/>
 </item>
 <item historyLabel="BookSellerAgent.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<position info="not_deleted" x="399" y="0"/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position info="not_deleted" x="2005" y="0"/>
 </item>
 <item historyLabel="BookSellerAgent.java" index="5">
-<position info="not_deleted" x="827" y="15"/>
+<position info="not_deleted" x="397" y="0"/>
 </item>
-<item historyLabel="Book.java" index="7">
-<position info="not_deleted" x="147" y="0"/>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="297" y="0"/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="151" y="5"/>
+</item>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="408" y="0"/>
+</item>
+<item historyLabel="Boook.java" index="0">
+<position info="not_deleted" x="151" y="5"/>
+</item>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position info="not_deleted" x="108" y="19"/>
+</item>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="81" y="5"/>
+</item>
+<item historyLabel="Sell.java" index="4">
+<position info="not_deleted" x="76" y="4"/>
 </item>
 <item historyLabel="BookSellerAgent.java" index="5">
-<position info="not_deleted" x="827" y="15"/>
+<position info="not_deleted" x="481" y="15"/>
 </item>
-<item historyLabel="BookSellerGui.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="BookTradingOntology.java" index="1">
+<position info="not_deleted" x="108" y="19"/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="Costs.java" index="3">
+<position info="not_deleted" x="81" y="5"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="5">
-<position info="not_deleted" x="2237" y="275"/>
-</item>
-<item historyLabel="BookSellerGui.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BookSellerAgent.java" index="9">
-<position info="not_deleted" x="1411" y="5"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="8">
-<position info="not_deleted" x="1223" y="6"/>
-</item>
-<item historyLabel="BookSellerAgent.java" index="9">
-<position info="not_deleted" x="5152" y="0"/>
-</item>
-<item historyLabel="BookBuyerAgent.java" index="8">
-<position info="not_deleted" x="5676" y="0"/>
-</item>
-<item active="true" historyLabel="BookSellerAgent.java" index="9">
-<position info="not_deleted" x="5152" y="0"/>
+<item active="true" historyLabel="Sell.java" index="4">
+<position info="not_deleted" x="76" y="4"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -369,6 +418,12 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -377,18 +432,34 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerAgent.java" tooltip="MyAgent/src/ua/agentlab/BookSellerAgent.java">
+<persistable path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Sell.java" tooltip="MyAgent/src/ua/agentlab/Sell.java">
+<persistable path="/MyAgent/src/ua/agentlab/Sell.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Costs.java" tooltip="MyAgent/src/ua/agentlab/Costs.java">
+<persistable path="/MyAgent/src/ua/agentlab/Costs.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookTradingVocabulary.java" tooltip="MyAgent/src/ua/agentlab/BookTradingVocabulary.java">
+<persistable path="/MyAgent/src/ua/agentlab/BookTradingVocabulary.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookTradingOntology.java" tooltip="MyAgent/src/ua/agentlab/BookTradingOntology.java">
+<persistable path="/MyAgent/src/ua/agentlab/BookTradingOntology.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Boook.java" tooltip="MyAgent/src/ua/agentlab/Boook.java">
+<persistable path="/MyAgent/src/ua/agentlab/Boook.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Book.java" tooltip="MyAgent/src/ua/agentlab/Book.java">
 <persistable path="/MyAgent/src/ua/agentlab/Book.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerGui.java" tooltip="MyAgent/src/ua/agentlab/BookSellerGui.java">
 <persistable path="/MyAgent/src/ua/agentlab/BookSellerGui.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerAgent.java" tooltip="MyAgent/src/ua/agentlab/BookSellerAgent.java">
-<persistable path="/MyAgent/src/ua/agentlab/BookSellerAgent.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookBuyerAgent.java" tooltip="MyAgent/src/ua/agentlab/BookBuyerAgent.java">
 <persistable path="/MyAgent/src/ua/agentlab/BookBuyerAgent.java"/>

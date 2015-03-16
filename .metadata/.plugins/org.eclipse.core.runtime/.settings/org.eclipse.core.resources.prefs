@@ -1,3 +1,6 @@
-#Thu Mar 05 17:59:25 EET 2015
+#Mon Mar 16 17:31:52 EET 2015
 version=1
+refresh.lightweight.enabled=true
 eclipse.preferences.version=1
+encoding=UTF-8
+refresh.enabled=true
