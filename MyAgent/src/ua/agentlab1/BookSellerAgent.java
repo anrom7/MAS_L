@@ -37,13 +37,16 @@ import java.util.*;
 public class BookSellerAgent extends Agent {
 	// The catalogue of books for sale (maps the title of a book to its price)
 	private Hashtable catalogue;
+	public Hashtable catalogueGanre; // для жанру
 	// The GUI by means of which the user can add books in the catalogue
 	private BookSellerGui myGui;
-
+	
+	
 	// Put agent initializations here
 	protected void setup() {
 		// Create the catalogue
 		catalogue = new Hashtable();
+		catalogueGanre = new Hashtable(); //створення екземпляру
 
 		// Create and show the GUI 
 		myGui = new BookSellerGui(this);
@@ -88,14 +91,21 @@ public class BookSellerAgent extends Agent {
 	/**
      This is invoked by the GUI when the user adds a new book for sale
 	 */
-	public void updateCatalogue(final String title, final int price) {
+	public void updateCatalogue(final String title, final int price, final String ganre) {
 		addBehaviour(new OneShotBehaviour() {
 			public void action() {
 				catalogue.put(title, new Integer(price));
-				System.out.println(title+" inserted into catalogue. Price = "+price);
+				catalogueGanre.put(title, ganre);//додавання жанру
+				System.out.println(title+" inserted into catalogue. Price = "+price + " Ganre: " + ganre);
 			}
 		} );
 	}
+	
+	public String getGanre(String title)
+	{
+		return (String) catalogueGanre.get(title);
+	}
+
 
 	/**
 	   Inner class OfferRequestsServer.
@@ -115,10 +125,14 @@ public class BookSellerAgent extends Agent {
 				ACLMessage reply = msg.createReply();
 
 				Integer price = (Integer) catalogue.get(title);
+				String ganre = (String) catalogueGanre.get(title);
 				if (price != null) {
 					// The requested book is available for sale. Reply with the price
 					reply.setPerformative(ACLMessage.PROPOSE);
 					reply.setContent(String.valueOf(price.intValue()));
+					reply.setLanguage(ganre); // передавання жанру 
+					//reply.setPerformative(ACLMessage.INFORM);
+					//reply.setContent(ganre);
 				}
 				else {
 					// The requested book is NOT available for sale.
@@ -154,9 +168,7 @@ public class BookSellerAgent extends Agent {
 				if (price != null) {
 					reply.setPerformative(ACLMessage.INFORM);
 					System.out.println(title+" sold to agent "+msg.getSender().getName());
-					System.out.println("Shop has these book:");
-				     
-				     //Iterator it = 
+					System.out.println("Shop has these book:");//виведення всіх книг 
 				     Set<String> setTitle = catalogue.keySet();
 				     for(String s : setTitle)
 				      System.out.println(s);

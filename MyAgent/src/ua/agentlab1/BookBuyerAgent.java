@@ -98,6 +98,7 @@ public class BookBuyerAgent extends Agent {
 	private class RequestPerformer extends Behaviour {
 		private AID bestSeller; // The agent who provides the best offer 
 		private int bestPrice;  // The best offered price
+		private String ganre; // додавання поля жанр
 		private int repliesCnt = 0; // The counter of replies from seller agents
 		private MessageTemplate mt; // The template to receive replies
 		private int step = 0;
@@ -126,13 +127,18 @@ public class BookBuyerAgent extends Agent {
 					// Reply received
 					if (reply.getPerformative() == ACLMessage.PROPOSE) {
 						// This is an offer 
+						
 						int price = Integer.parseInt(reply.getContent());
 						if (bestSeller == null || price < bestPrice) {
 							// This is the best offer at present
 							bestPrice = price;
 							bestSeller = reply.getSender();
+							ganre = reply.getLanguage(); // отримання жанру
 						}
 					}
+					//if (reply.getPerformative() == ACLMessage.INFORM) {
+					//	ganre = reply.getContent();
+					//}
 					repliesCnt++;
 					if (repliesCnt >= sellerAgents.length) {
 						// We received all replies
@@ -165,6 +171,7 @@ public class BookBuyerAgent extends Agent {
 						// Purchase successful. We can terminate
 						System.out.println(targetBookTitle+" successfully purchased from agent "+reply.getSender().getName());
 						System.out.println("Price = "+bestPrice);
+						System.out.println("Ganre = " + ganre);//виведення жанру
 						myAgent.doDelete();
 					}
 					else {
