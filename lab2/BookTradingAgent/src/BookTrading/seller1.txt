@@ -1,0 +1,10 @@
+An Introduction To Multiagent Systems|232
+Artificial Intelligence: A Modern Approach|153
+The State of the Art in Agent Communication Languages|321
+Multiagent Systems, A Modern Approach to Distributed Artificial Intelligence|149
+Agent-technology for E-commerce|252
+Indirect Interaction in Environments for Multiagent Systems|132
+The Journal of Autonomous Agents and Multi-Agent Systems|58
+Cognition and Multi-Agent Interaction|198
+Intelligent Agents|167
+Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations|201
