@@ -27,6 +27,7 @@ import jade.core.Agent;
 import jade.core.behaviours.*;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import jade.lang.acl.UnreadableException;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
@@ -123,11 +124,16 @@ public class BookSellerAgent extends Agent {
 			ACLMessage msg = myAgent.receive(mt);
 			if (msg != null) {
 				// CFP Message received. Process it
-				String title = msg.getContent();
+				BookRequest bookRequest = null;
+				try {
+					bookRequest = (BookRequest) msg.getContentObject();
+				} catch (UnreadableException e) {
+					e.printStackTrace();
+				}
 				ACLMessage reply = msg.createReply();
 
-				Integer price = (Integer) catalogue.get(title);
-				if (price != null) {
+				Integer price = (Integer) catalogue.get(bookRequest.getBookTitle());
+				if (price != null && price <= bookRequest.getMaxPrice()) {
 					// The requested book is available for sale. Reply with the price
 					reply.setPerformative(ACLMessage.PROPOSE);
 					reply.setContent(String.valueOf(price.intValue()));

@@ -23,6 +23,8 @@ Boston, MA  02111-1307, USA.
 
 package com.kovaliuk.politeh.ms;
 
+import java.io.IOException;
+
 import jade.core.Agent;
 import jade.core.AID;
 import jade.core.behaviours.*;
@@ -39,6 +41,7 @@ public class BookBuyerAgent extends Agent {
 
 	// The title of the book to buy
 	private String targetBookTitle;
+	private int maxPrice;
 	// The list of known seller agents
 	private AID[] sellerAgents;
 
@@ -51,7 +54,8 @@ public class BookBuyerAgent extends Agent {
 		Object[] args = getArguments();
 		if (args != null && args.length > 0) {
 			targetBookTitle = (String) args[0];
-			System.out.println("Target book is "+targetBookTitle);
+			maxPrice = Integer.parseInt((String) args[1]);
+			System.out.println("Target book is " + targetBookTitle + ", max price is " + maxPrice);
 
 			// Add a TickerBehaviour that schedules a request to seller agents every minute
 			addBehaviour(new TickerBehaviour(this, 60000) {
@@ -120,6 +124,11 @@ public class BookBuyerAgent extends Agent {
 					cfp.addReceiver(sellerAgents[i]);
 				} 
 				cfp.setContent(targetBookTitle);
+				try {
+					cfp.setContentObject(new BookRequest(targetBookTitle, maxPrice));
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 				cfp.setConversationId("book-trade");
 				cfp.setReplyWith("cfp"+System.currentTimeMillis()); // Unique value
 				myAgent.send(cfp);
