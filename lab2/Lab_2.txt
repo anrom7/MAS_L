@@ -1,0 +1,40 @@
+modified the program adding method, where the price is reduced by 20% of the original for some time.
+
+
+
+//variables that contain information about the initial and current price
+
+	private Hashtable catalogue;
+	private Hashtable copyCatalogue;
+
+
+//a method that reduces the price for 1 every 9 seconds, but not below 80%
+
+		addBehaviour(new TickerBehaviour(this, 9000) {
+			protected void onTick() {
+				
+				Iterator itr = catalogue.keySet().iterator();
+				
+				while (itr.hasNext()) {
+					String key = (String) itr.next();
+					
+					Integer values = (Integer) catalogue.get(key);
+					Integer oldvalues = (Integer) copyCatalogue.get(key);
+					
+					if (values > oldvalues * 0.8 ){					
+						values = values - 1;
+						System.out.println( "Agent seller " + getAID().getName() +"  " + "Name " + key + " New price " + values);
+						try {
+							catalogue.put(key, values);
+						}catch (Exception x){
+							System.out.println ("exception E");
+						}
+						
+					}
+					
+				}
+
+			}
+		} );
+
+when buying goods information on the current and initial price removed
