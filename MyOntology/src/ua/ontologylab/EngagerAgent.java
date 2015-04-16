@@ -29,7 +29,7 @@ import ua.ontologylab.PersonTooOld;
 import ua.ontologylab.WorksFor;
 
 /**
-	This agent is able to engage people on behalf of company 
+	Цей агент здатний залучити людей від імені компанії
 	CSELT
 	Via Reiss Romoli 274 - Turin
 	
@@ -46,7 +46,7 @@ public class EngagerAgent extends Agent {
 
 	// AGENT BEHAVIOURS
 	/**
-		This behaviour handles all queries about people working for a company
+		Така поведінка обробляє всі запити про людей , що працюють в компанії,
 		following the FIPA-Query protocol
 	*/
 	class HandleEnganementQueriesBehaviour extends SimpleAchieveREResponder {
@@ -69,7 +69,7 @@ public class EngagerAgent extends Agent {
 		
 		/**
 			This method is called when a QUERY-IF or QUERY-REF message is received.
-			
+			Цей метод викликається, коли отримав повідомлення запиту 
 			@param msg The received query message
 			@return The ACL message to be sent back as reply
 			@see jade.proto.FipaQueryResponderBehaviour
@@ -108,7 +108,7 @@ public class EngagerAgent extends Agent {
 				if (((EngagerAgent) myAgent).isWorking(p, c)) 
 					reply.setContent(msg.getContent());
 				 else {
-					// Create an object representing the fact that the WORKS_FOR 
+					// Створити об'єкт, що представляє той факт, що WORKS_FOR 
 					// predicate is NOT true.
 					Ontology o = getContentManager().lookupOntology(EmploymentOntology.NAME);
 					AbsPredicate not = new AbsPredicate(SLVocabulary.NOT);

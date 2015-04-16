@@ -1,4 +1,7 @@
-#Thu Mar 05 17:59:29 EET 2015
+#Tue Mar 17 01:03:42 EET 2015
+IMPORT_FILES_AND_FOLDERS_MODE=prompt
+IMPORT_FILES_AND_FOLDERS_VIRTUAL_FOLDER_MODE=prompt
+SAVE_ALL_BEFORE_BUILD=true
 eclipse.preferences.version=1
 tipsAndTricks=true
 platformState=1424983351106

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="jade.content.lang.Codec"/>
+<fullyQualifiedTypeName name="com.sun.jndi.cosnaming.IiopUrl.Address"/>
+<fullyQualifiedTypeName name="com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference.Address"/>
 </qualifiedTypeNameHistroy>
