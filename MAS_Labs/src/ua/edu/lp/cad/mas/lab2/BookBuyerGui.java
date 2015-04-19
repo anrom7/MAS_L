@@ -107,6 +107,7 @@ public class BookBuyerGui extends JFrame {
 				@Override
 				public void onBookBay(String title) {
 					books.remove(title);
+					myAgent.removeBook(title);
 					fireTableDataChanged();
 				}
 			});

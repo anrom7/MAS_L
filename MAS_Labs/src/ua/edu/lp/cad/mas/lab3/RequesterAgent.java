@@ -130,7 +130,7 @@ public class RequesterAgent extends Agent {
 				wf.setPerson(p);
 				wf.setCompany(((RequesterAgent) myAgent).c);
 				
-				Ontology o = myAgent.getContentManager().lookupOntology(EmploymentOntology.NAME);		
+				// Ontology o = myAgent.getContentManager().lookupOntology(EmploymentOntology.NAME);		
 				// Create an ACL message to query the engager agent if the above fact is true or false
 				ACLMessage queryMsg = new ACLMessage(ACLMessage.QUERY_IF);
 				queryMsg.addReceiver(((RequesterAgent) myAgent).engager);

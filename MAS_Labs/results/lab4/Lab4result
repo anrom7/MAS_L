@@ -1,0 +1,39 @@
+Apr 19, 2015 9:51:01 PM jade.core.Runtime beginContainer
+INFO: ----------------------------------
+    This is JADE 4.2.0 - revision 6574 of 2012/06/20 15:38:00
+    downloaded in Open Source, under LGPL restrictions,
+    at http://jade.tilab.com/
+----------------------------------------
+Retrieving CommandDispatcher for platform null
+Apr 19, 2015 9:51:01 PM jade.imtp.leap.LEAPIMTPManager initialize
+INFO: Listening for intra-platform commands on address:
+- jicp://127.0.0.1:1099
+
+Apr 19, 2015 9:51:01 PM jade.core.BaseService init
+INFO: Service jade.core.management.AgentManagement initialized
+Apr 19, 2015 9:51:02 PM jade.core.BaseService init
+INFO: Service jade.core.messaging.Messaging initialized
+Apr 19, 2015 9:51:02 PM jade.core.BaseService init
+INFO: Service jade.core.resource.ResourceManagement initialized
+Apr 19, 2015 9:51:02 PM jade.core.BaseService init
+INFO: Service jade.core.mobility.AgentMobility initialized
+Apr 19, 2015 9:51:02 PM jade.core.BaseService init
+INFO: Service jade.core.event.Notification initialized
+Apr 19, 2015 9:51:02 PM jade.mtp.http.HTTPServer <init>
+INFO: HTTP-MTP Using XML parser com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser
+Apr 19, 2015 9:51:02 PM jade.core.messaging.MessagingService boot
+INFO: MTP addresses:
+http://HOME-PC:7778/acc
+Apr 19, 2015 9:51:02 PM jade.core.AgentContainerImpl joinPlatform
+INFO: --------------------------------------
+Agent container Main-Container@127.0.0.1 is ready.
+--------------------------------------------
+Hello! Buyer-agent Buyer2@127.0.0.1:1099/JADE is ready.
+Hello! Buyer-agent Buyer1@127.0.0.1:1099/JADE is ready.
+test inserted into catalogue. Price = 10
+test inserted into catalogue. Price = 5
+Added book test
+test sold to agent Buyer1@127.0.0.1:1099/JADE
+test successfully purchased.
+Price = 5
+

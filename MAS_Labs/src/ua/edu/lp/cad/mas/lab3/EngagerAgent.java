@@ -247,7 +247,7 @@ public class EngagerAgent extends Agent {
 				Action a = (Action)getContentManager().extractContent(request);
 				Engage e = (Engage) a.getAction();
 				Person p = e.getPerson();
-				Company c = e.getCompany();
+				// Company c = e.getCompany();
 			
 				// Check person's age. If < 35 --> AGREE, else REFUSE and exit
 				if (p.getAge().intValue() < 35){
@@ -328,9 +328,9 @@ public class EngagerAgent extends Agent {
   		addBehaviour(new HandleEnganementQueriesBehaviour(this));
   	
 		// Create and add the behaviour for handling REQUESTS using the employment-ontology
-		MessageTemplate mt = MessageTemplate.and(
+		/* MessageTemplate mt = MessageTemplate.and(
 											MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
-											MessageTemplate.MatchOntology(EmploymentOntology.NAME));
+											MessageTemplate.MatchOntology(EmploymentOntology.NAME)); */
 	  	HandleEnganementQueriesBehaviour b = new HandleEnganementQueriesBehaviour(this);
 	  	HandleEngageBehaviour c = new HandleEngageBehaviour(this);
 	  	addBehaviour(b);

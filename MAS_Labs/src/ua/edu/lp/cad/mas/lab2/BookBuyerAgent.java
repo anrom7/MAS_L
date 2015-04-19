@@ -6,6 +6,8 @@ import java.util.List;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.Behaviour;
+import jade.core.behaviours.FSMBehaviour;
+import jade.core.behaviours.OneShotBehaviour;
 import jade.core.behaviours.TickerBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
@@ -35,7 +37,7 @@ public class BookBuyerAgent extends Agent {
 		
 		System.out.println("Hello! Buyer-agent " + getAID().getName() + " is ready.");
 		
-		addBehaviour(new TickerBehaviour(this, 60000) {
+		addBehaviour(new TickerBehaviour(this, 30000) {
 			private static final long serialVersionUID = -2539521521322352923L;
 
 			protected void onTick() {
@@ -58,7 +60,7 @@ public class BookBuyerAgent extends Agent {
 				
 				// Пошук по усіх книгах
 				for (String title : targetBookTitles) {
-					myAgent.addBehaviour(new RequestPerformer(title));
+					myAgent.addBehaviour(new RequestPerformerLab4(title));
 				}
 			}
 		});
@@ -79,6 +81,161 @@ public class BookBuyerAgent extends Agent {
 	// Видалення слухача
 	public void removeBookHandler(BookHandler bookHandler) {
 		this.bookHandlers.remove(bookHandler);
+	}
+	
+	private class RequestPerformerLab4 extends FSMBehaviour {
+		private static final long serialVersionUID = 4590231553481059577L;
+		
+		private static final String STATE_1 = "s1";
+		private static final String STATE_2 = "s2";
+		private static final String STATE_3 = "s3";
+		private static final String STATE_4 = "s4";
+		
+		public RequestPerformerLab4(String title) {
+			
+			getDataStore().put("targetBookTitle", title);
+			
+			Behaviour behaviour1 = new OneShotBehaviour() {
+				private static final long serialVersionUID = 4716061383138608956L;
+
+				@Override
+				public void action() {
+					ACLMessage cfp = new ACLMessage(ACLMessage.CFP);
+					for (int i = 0; i < sellerAgents.length; ++i) {
+						cfp.addReceiver(sellerAgents[i]);
+					}
+					
+					String targetBookTitle = (String)getDataStore().get("targetBookTitle");
+					
+					cfp.setContent(targetBookTitle);
+					cfp.setConversationId("book-trade");
+					cfp.setReplyWith("cfp" + System.currentTimeMillis()); // Unique value
+					myAgent.send(cfp);
+					// Prepare the template to get proposals
+					MessageTemplate mt = MessageTemplate.and(
+							MessageTemplate.MatchConversationId("book-trade"),
+							MessageTemplate.MatchInReplyTo(cfp.getReplyWith()));
+					
+					getDataStore().put("message-template", mt);
+				}
+			};
+			behaviour1.setDataStore(getDataStore());
+			
+			Behaviour behaviour2 = new OneShotBehaviour() {
+				private static final long serialVersionUID = -4913499551218947424L;
+				
+				private int repliesCnt = -1;
+				private AID bestSeller = null;
+				private int bestPrice = -1;
+				
+				@Override
+				public void action() {
+					MessageTemplate mt = (MessageTemplate)getDataStore().get("message-template");
+					
+					ACLMessage reply = myAgent.receive(mt);
+					if (reply != null) {
+						// Reply received
+						if (reply.getPerformative() == ACLMessage.PROPOSE) {
+							// This is an offer
+							int price = Integer.parseInt(reply.getContent());
+							if (bestSeller == null || price < bestPrice) {
+								// This is the best offer at present
+								bestPrice = price;
+								bestSeller = reply.getSender();
+							}
+						}
+						
+						repliesCnt++;
+						
+						if (repliesCnt < sellerAgents.length) {
+							block();
+						}
+					} else {
+						block();
+					}
+				}
+
+				@Override
+				public int onEnd() {
+					if (bestSeller == null) {
+						getParent().done();
+					}
+					
+					getDataStore().put("best-seller", bestSeller);
+					getDataStore().put("best-price", bestPrice);
+					
+					return 1;
+				}
+			};
+			behaviour2.setDataStore(getDataStore());
+			
+			Behaviour behaviour3 = new OneShotBehaviour() {
+				private static final long serialVersionUID = 7637636615922896814L;
+
+				@Override
+				public void action() {
+					AID bestSeller = (AID)getDataStore().get("best-seller");
+					String targetBookTitle = (String)getDataStore().get("targetBookTitle");
+					
+					ACLMessage order = new ACLMessage(ACLMessage.ACCEPT_PROPOSAL);
+					order.addReceiver(bestSeller);
+					order.setContent(targetBookTitle);
+					order.setConversationId("book-trade");
+					order.setReplyWith("order" + System.currentTimeMillis());
+					myAgent.send(order);
+					
+					MessageTemplate mt = MessageTemplate.and(
+							MessageTemplate.MatchConversationId("book-trade"),
+							MessageTemplate.MatchInReplyTo(order.getReplyWith()));
+					getDataStore().put("message-template", mt);
+				}
+				
+				@Override
+				public int onEnd() {
+					return 2;
+				}
+			};
+			behaviour3.setDataStore(getDataStore());
+			
+			Behaviour behaviour4 = new OneShotBehaviour() {
+				private static final long serialVersionUID = 4889129965144304811L;
+
+				@Override
+				public void action() {
+					MessageTemplate mt = (MessageTemplate)getDataStore().get("message-template");
+					
+					ACLMessage reply = myAgent.receive(mt);
+					if (reply != null) {
+						// Purchase order reply received
+						if (reply.getPerformative() == ACLMessage.INFORM) {
+							String targetBookTitle = (String)getDataStore().get("targetBookTitle");
+							// Purchase successful. We can terminate
+							System.out.println(targetBookTitle + " successfully purchased.");
+							
+							// Повідомляємо усіх слухачів про зміну в наборі книжок
+							for (BookHandler handler : bookHandlers) {
+								handler.onBookBay(targetBookTitle);
+							}
+							
+							int bestPrice = (int)getDataStore().get("best-price");
+							System.out.println("Price = " + bestPrice);
+						}
+					} else {
+						block();
+					}
+				}
+			};
+			behaviour4.setDataStore(getDataStore());
+			
+			registerFirstState(behaviour1, STATE_1);
+			registerState(behaviour2, STATE_2);
+			registerState(behaviour3, STATE_3);
+			registerLastState(behaviour4, STATE_4);
+			
+			registerTransition(STATE_1, STATE_2, 0);
+			registerTransition(STATE_2, STATE_3, 1);
+			registerTransition(STATE_3, STATE_4, 2);
+		}
 	}
 
 	private class RequestPerformer extends Behaviour {
@@ -199,5 +356,9 @@ public class BookBuyerAgent extends Agent {
 	
 	public interface BookHandler {
 		public void onBookBay(String title); // Повідомляє про видалення назви книги
+	}
+
+	public void removeBook(String title) {
+		targetBookTitles.remove(title);
 	}
 }
