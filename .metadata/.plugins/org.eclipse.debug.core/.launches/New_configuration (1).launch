@@ -7,6 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="jade.Boot"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-gui OLOLO:ua.behaviourslab.SimpleAgent;LOL:ua.behaviourslab.TimeAgent"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-gui SimpleA:ua.behaviourslab.SimpleAgent;TimeA:ua.behaviourslab.TimeAgent;ComplexB:ua.behaviourslab.ComplexBehaviouAgent;FSMA:ua.behaviourslab.FSMAgent;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Mybehaviours"/>
 </launchConfiguration>
