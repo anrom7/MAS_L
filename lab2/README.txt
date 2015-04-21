@@ -82,5 +82,13 @@ GUI has 2 text fields: Title of book to search for and Maximum Price, which the 
 		}
 	}*/
 ...
-
+3) Main if:
+...
+		if (bestPrice <= targetBookPrice){           - Checks if the best price is lower then Maximum price
+	...
+		else {
+			System.out.println("Attempt failed: too expensive.");
+			step = 4;
+		}
+...
 3) Other minor changes, fixes, and debuging.
