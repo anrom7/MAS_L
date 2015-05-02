@@ -1,0 +1,28 @@
+modified the program to consistently created sellers. The condition is to complete them number 2, which drops randomly.
+
+as buyers and sellers created automatically.
+private void startNewAgent(...
+
+}
+
+add seller
+
+private class NameSellers extends OneShotBehaviour{
+	...
+}
+
+add buyer
+
+private class GeneratorBuyers extends OneShotBehaviour {
+	...
+}
+
+the seller must enter the book title and cost.
+
+
+
+sequence of actions
+
+		fsm.registerDefaultTransition(STATE_A, STATE_A);
+		fsm.registerTransition(STATE_A, STATE_C, 2);
+		fsm.registerDefaultTransition(STATE_C, STATE_F);
