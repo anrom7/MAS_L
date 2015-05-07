@@ -40,6 +40,7 @@ public class BookSellerAgent extends Agent {
 	 * 
 	 */
 	private static final long serialVersionUID = -2081123542990817513L;
+	//оголошення фабрики потоків, щоб запускати кожну поведінку в агенті в окремому потоці
 	private ThreadedBehaviourFactory tbf = new ThreadedBehaviourFactory();
 	// The catalogue of books for sale (maps the title of a book to its price)
 	private Hashtable catalogue;
@@ -69,12 +70,12 @@ public class BookSellerAgent extends Agent {
 			fe.printStackTrace();
 		}
 		
-		
+		//призначення окремих поведінок для даної фабрики 
 		// Add the behaviour serving queries from buyer agents
-		addBehaviour(tbf.wrap(new OfferRequestsServer()));
+		addBehaviour(tbf.wrap(new OfferRequestsServer()));// поведінка оголошення вільних книжок, які продаються
 
 		// Add the behaviour serving purchase orders from buyer agents
-		addBehaviour(tbf.wrap(new PurchaseOrdersServer()));
+		addBehaviour(tbf.wrap(new PurchaseOrdersServer()));// підтвердження угоди і продаж книжки
 	}
 
 	// Put agent clean-up operations here

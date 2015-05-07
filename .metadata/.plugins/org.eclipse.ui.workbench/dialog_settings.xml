@@ -4,6 +4,7 @@
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\Users\Mariia\Desktop\HadzeraBehaviours\HadzeraBehaviours\src\ua\agentlab"/>
 			<item value="D:\НУ ЛП\САПР\5-й курс\2-й семестр\Методи проектування мультиагентних систем (Романюк)\ПЗ\Новая папка\JADE-examples-4.2.0\jade\src\examples\behaviours"/>
 			<item value="D:\НУ ЛП\САПР\5-й курс\2-й семестр\Методи проектування мультиагентних систем (Романюк)\ПЗ\Новая папка\JADE-examples-4.2.0\jade\src\examples\ontology"/>
 			<item value="D:\НУ ЛП\САПР\5-й курс\2-й семестр\Методи проектування мультиагентних систем (Романюк)\ПЗ\Новая папка\JADE-examples-4.2.0\jade\src\examples\ontology\employment"/>
