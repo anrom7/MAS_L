@@ -10,21 +10,32 @@ import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 
 import java.util.*;
+import jade.content.lang.Codec; 
+
+import jade.content.onto.*;
+import jade.content.lang.sl.SLCodec;
 
 public class BookSellerAgent extends Agent {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -3918119750762462404L;
+	private Codec codec = new SLCodec();
+	private Ontology ontology = BookTradingOntology.getInstance();
+
 	// The catalogue of books for sale (maps the title of a book to its price)
-	private Hashtable catalogue;
+	private ArrayList<Book> catalogue;
 	// The GUI by means of which the user can add books in the catalogue
 	private BookSellerGui myGui;
 
 	// Put agent initializations here
 	protected void setup() {
+		
+		getContentManager().registerLanguage(codec); 
+		getContentManager().registerOntology(ontology);
+		
 		// Create the catalogue
-		catalogue = new Hashtable();
+		catalogue = new ArrayList<Book>();
 
 		// Create and show the GUI 
 		myGui = new BookSellerGui(this);
@@ -69,7 +80,7 @@ public class BookSellerAgent extends Agent {
 	/**
      This is invoked by the GUI when the user adds a new book for sale
 	 */
-	public void updateCatalogue(final String title, final int price) {
+	public void updateCatalogue(final String title, final int price,final int count) {
 		addBehaviour(new OneShotBehaviour() {
 			/**
 			 * 
@@ -77,8 +88,11 @@ public class BookSellerAgent extends Agent {
 			private static final long serialVersionUID = 4363910349522932265L;
 
 			public void action() {
-				catalogue.put(title, new Integer(price));
-				System.out.println(title+" inserted into catalogue. Price = "+price);
+				for(int i=0;i<count;i++){
+					catalogue.add(new Book(title,price));
+					//catalogue.put(title, new Integer(price));
+				}
+				System.out.println(Integer.toString(count) +" books "+title+" inserted into catalogue. Price = "+price);
 			}
 		} );
 	}
@@ -105,7 +119,15 @@ public class BookSellerAgent extends Agent {
 				String title = msg.getContent();
 				ACLMessage reply = msg.createReply();
 
-				Integer price = (Integer) catalogue.get(title);
+				Integer price = null;
+				for (Book book: catalogue)
+				{
+					if (book.title.equals(title))
+					{
+						price = book.price;
+						break;
+					}
+				}
 				if (price != null) {
 					// The requested book is available for sale. Reply with the price
 					reply.setPerformative(ACLMessage.PROPOSE);
@@ -116,6 +138,7 @@ public class BookSellerAgent extends Agent {
 					reply.setPerformative(ACLMessage.REFUSE);
 					reply.setContent("not-available");
 				}
+				
 				myAgent.send(reply);
 			}
 			else {
@@ -146,8 +169,17 @@ public class BookSellerAgent extends Agent {
 				String title = msg.getContent();
 				ACLMessage reply = msg.createReply();
 
-				Integer price = (Integer) catalogue.remove(title);
-				if (price != null) {
+				Boolean finded = false;
+				
+				for(Book book:catalogue){
+					if (book.title.equals(title))
+					{
+						finded = catalogue.remove(book);
+						break;
+					}
+				}
+				
+				if (finded) {
 					reply.setPerformative(ACLMessage.INFORM);
 					System.out.println(title+" sold to agent "+msg.getSender().getName());
 				}
