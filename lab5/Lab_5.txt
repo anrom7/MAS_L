@@ -1,0 +1,7 @@
+modified the program by adding a class to do it and checking operations.
+
+	public static void Result(int one, int two) {
+	
+	...
+
+	}
