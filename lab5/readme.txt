@@ -1,0 +1,1 @@
+На цій лабораторній роботі я навчився використовати протоколи взаємодії, модифікував агенти BrokerAgent, FIPARequestInitiatorAgent, FIPARequestResponderAgent.
