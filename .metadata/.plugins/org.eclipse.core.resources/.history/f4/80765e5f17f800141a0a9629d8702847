@@ -22,7 +22,7 @@
  * Boston, MA  02111-1307, USA.
  * **************************************************************
  */
-package examples.protocols;
+package ua.protocolslab;
 
 import jade.core.Agent;
 import jade.core.AID;
@@ -47,6 +47,10 @@ import java.util.Vector;
    @author Giovanni Caire - TILAB
  */
 public class BrokerAgent extends Agent {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7213730789706355897L;
 	private AID responder;
 	
   protected void setup() {

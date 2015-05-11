@@ -1,10 +1,25 @@
 INDEX VERSION 1.126+D:\НУ ЛП\САПР\5-й курс\2-й семестр\Методи проектування мультиагентних систем (Романюк)\MyAgent\.metadata\.plugins\org.eclipse.jdt.core
 3235676916.index
+1697886153.index
 1089903281.index
-3854490629.index
+30765161.index
+3133528496.index
 2974639106.index
+3854490629.index
+305854171.index
+4155206848.index
+1498219845.index
 3214720893.index
 3405816956.index
+1818563445.index
+4041092966.index
+3974580528.index
 161774605.index
 51879290.index
+1115467115.index
+163172794.index
+3065916431.index
+4108727661.index
+4173023868.index
+1995173708.index
 4142756709.index

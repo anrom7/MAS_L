@@ -33,27 +33,27 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerAgent.java" partName="BookSellerAgent.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/Mybehaviours/src/ua/behaviourslab/BookSellerAgent.java" title="BookSellerAgent.java" tooltip="Mybehaviours/src/ua/behaviourslab/BookSellerAgent.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Mybehaviours/src/ua/behaviourslab/BookSellerAgent.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3003" selectionTopPixel="675"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BrokerAgent.java" partName="BrokerAgent.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/Protocols/src/ua/protocolslab/BrokerAgent.java" title="BrokerAgent.java" tooltip="Protocols/src/ua/protocolslab/BrokerAgent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Protocols/src/ua/protocolslab/BrokerAgent.java"/>
+<editorState selectionHorizontalPixel="63" selectionLength="0" selectionOffset="2928" selectionTopPixel="373"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookBuyerAgent.java" partName="BookBuyerAgent.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/Mybehaviours/src/ua/behaviourslab/BookBuyerAgent.java" title="BookBuyerAgent.java" tooltip="Mybehaviours/src/ua/behaviourslab/BookBuyerAgent.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Mybehaviours/src/ua/behaviourslab/BookBuyerAgent.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1038" selectionTopPixel="2256"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BookSellerGui.java" partName="BookSellerGui.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/Mybehaviours/src/ua/behaviourslab/BookSellerGui.java" title="BookSellerGui.java" tooltip="Mybehaviours/src/ua/behaviourslab/BookSellerGui.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Mybehaviours/src/ua/behaviourslab/BookSellerGui.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1138" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContractNetResponderAgent.java" partName="ContractNetResponderAgent.java" path="D:/НУ ЛП/САПР/5-й курс/2-й семестр/Методи проектування мультиагентних систем (Романюк)/MyAgent/Protocols/src/ua/protocolslab/ContractNetResponderAgent.java" title="ContractNetResponderAgent.java" tooltip="Protocols/src/ua/protocolslab/ContractNetResponderAgent.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Protocols/src/ua/protocolslab/ContractNetResponderAgent.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1101" selectionTopPixel="888"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Warnings (36 items)"/>
+<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -104,7 +104,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
@@ -195,7 +195,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.22408687" ratioLeft="227" ratioRight="786" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7787611" ratioLeft="352" ratioRight="100" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.90929204" ratioLeft="411" ratioRight="41" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -236,9 +236,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyOntology/src/ua/ontologylab/EngagerAgent.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyOntology/src/ua/ontologylab/EmploymentOntology.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyOntology/src/ua/ontologylab/RequesterAgent.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Mybehaviours/src/ua/behaviourslab/ComplexBehaviourAgent.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Mybehaviours/src/ua/behaviourslab/FSMAgent.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Mybehaviours/src/ua/behaviourslab/SimpleAgent.java"/>
@@ -250,156 +247,164 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Mybehaviours/src/ua/behaviourslab/BookBuyerAgent.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Mybehaviours/src/ua/behaviourslab/BookSellerGui.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/shjdh/src/com/name/Ilona.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Mybehaviours/src/ua/behaviourslab/BookBuyerAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Protocols/src/ua/protocolslab/BrokerAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Protocols/src/ua/protocolslab/ContractNetInitiatorAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Protocols/src/ua/protocolslab/ContractNetResponderAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Protocols/src/ua/protocolslab/FIPARequestInitiatorAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Protocols/src/ua/protocolslab/FIPARequestResponderAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Protocols/src/ua/protocolslab/BrokerAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Protocols/src/ua/protocolslab/ContractNetResponderAgent.java"/>
 </editors>
-<item historyLabel="EngagerAgent.java" index="0">
-<position info="not_deleted" x="4426" y="114"/>
-</item>
-<item historyLabel="EmploymentOntology.java" index="1">
-<position info="not_deleted" x="2260" y="6"/>
-</item>
-<item historyLabel="RequesterAgent.java" index="2">
-<position info="not_deleted" x="68" y="0"/>
-</item>
-<item historyLabel="RequesterAgent.java" index="2">
-<position info="not_deleted" x="1243" y="0"/>
-</item>
-<item historyLabel="EmploymentOntology.java" index="1">
-<position info="not_deleted" x="2260" y="6"/>
-</item>
-<item historyLabel="ComplexBehaviourAgent.java" index="3">
-<position info="not_deleted" x="73" y="0"/>
-</item>
-<item historyLabel="ComplexBehaviourAgent.java" index="3">
-<position info="not_deleted" x="1086" y="16"/>
-</item>
-<item historyLabel="ComplexBehaviourAgent.java" index="3">
-<position info="not_deleted" x="1616" y="21"/>
-</item>
-<item historyLabel="ComplexBehaviourAgent.java" index="3">
-<position info="not_deleted" x="1751" y="19"/>
-</item>
-<item historyLabel="ComplexBehaviourAgent.java" index="3">
-<position info="not_deleted" x="1988" y="0"/>
-</item>
-<item historyLabel="FSMAgent.java" index="4">
-<position info="not_deleted" x="68" y="0"/>
-</item>
-<item historyLabel="FSMAgent.java" index="4">
-<position info="not_deleted" x="1164" y="0"/>
-</item>
-<item historyLabel="FSMAgent.java" index="4">
-<position info="not_deleted" x="1362" y="8"/>
-</item>
-<item historyLabel="FSMAgent.java" index="4">
-<position info="not_deleted" x="1817" y="18"/>
-</item>
-<item historyLabel="FSMAgent.java" index="4">
-<position info="not_deleted" x="3133" y="11"/>
-</item>
-<item historyLabel="FSMAgent.java" index="4">
+<item historyLabel="FSMAgent.java" index="1">
 <position info="not_deleted" x="3540" y="15"/>
 </item>
-<item historyLabel="SimpleAgent.java" index="5">
+<item historyLabel="SimpleAgent.java" index="2">
 <position info="not_deleted" x="73" y="0"/>
 </item>
-<item historyLabel="SimpleAgent.java" index="5">
+<item historyLabel="SimpleAgent.java" index="2">
 <position info="not_deleted" x="1104" y="0"/>
 </item>
-<item historyLabel="SimpleAgent.java" index="5">
+<item historyLabel="SimpleAgent.java" index="2">
 <position info="not_deleted" x="1730" y="11"/>
 </item>
-<item historyLabel="SimpleAgent.java" index="5">
+<item historyLabel="SimpleAgent.java" index="2">
 <position info="not_deleted" x="1995" y="21"/>
 </item>
-<item historyLabel="SimpleAgent.java" index="5">
+<item historyLabel="SimpleAgent.java" index="2">
 <position info="not_deleted" x="2038" y="0"/>
 </item>
-<item historyLabel="SimpleAgent.java" index="5">
+<item historyLabel="SimpleAgent.java" index="2">
 <position info="not_deleted" x="2337" y="17"/>
 </item>
-<item historyLabel="SimpleAgent.java" index="5">
+<item historyLabel="SimpleAgent.java" index="2">
 <position info="not_deleted" x="2847" y="25"/>
 </item>
-<item historyLabel="TimeAgent.java" index="6">
+<item historyLabel="TimeAgent.java" index="3">
 <position info="not_deleted" x="73" y="0"/>
 </item>
-<item historyLabel="TimeAgent.java" index="6">
+<item historyLabel="TimeAgent.java" index="3">
 <position info="not_deleted" x="1230" y="0"/>
 </item>
-<item historyLabel="TimeAgent.java" index="6">
+<item historyLabel="TimeAgent.java" index="3">
 <position info="not_deleted" x="1655" y="9"/>
 </item>
-<item historyLabel="TimeAgent.java" index="6">
+<item historyLabel="TimeAgent.java" index="3">
 <position info="not_deleted" x="1703" y="0"/>
 </item>
-<item historyLabel="TimeAgent.java" index="6">
+<item historyLabel="TimeAgent.java" index="3">
 <position info="not_deleted" x="1933" y="27"/>
 </item>
-<item historyLabel="TimeAgent.java" index="6">
+<item historyLabel="TimeAgent.java" index="3">
 <position info="not_deleted" x="1980" y="0"/>
 </item>
-<item historyLabel="TimeAgent.java" index="6">
+<item historyLabel="TimeAgent.java" index="3">
 <position info="not_deleted" x="2253" y="27"/>
 </item>
-<item historyLabel="EngagerAgent.java" index="7">
+<item historyLabel="EngagerAgent.java" index="4">
 <position info="not_deleted" x="7232" y="0"/>
 </item>
-<item historyLabel="ComplexBehaviourAgent.java" index="3">
+<item historyLabel="ComplexBehaviourAgent.java" index="0">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="68" y="0"/>
 </item>
-<item historyLabel="EngagerAgent.java" index="9">
+<item historyLabel="EngagerAgent.java" index="6">
 <position info="not_deleted" x="7232" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="68" y="0"/>
 </item>
-<item historyLabel="FSMAgent.java" index="10">
+<item historyLabel="FSMAgent.java" index="7">
 <position info="not_deleted" x="68" y="0"/>
 </item>
-<item historyLabel="FSMAgent.java" index="10">
+<item historyLabel="FSMAgent.java" index="7">
 <position info="not_deleted" x="1023" y="16"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="68" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="1040" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="1045" y="0"/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="11">
+<item historyLabel="BookBuyerAgent.java" index="8">
 <position info="not_deleted" x="1038" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="1045" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="1014" y="0"/>
 </item>
-<item historyLabel="BookBuyerAgent.java" index="11">
+<item historyLabel="BookBuyerAgent.java" index="8">
 <position info="not_deleted" x="1038" y="0"/>
 </item>
-<item historyLabel="BookSellerGui.java" index="12">
+<item historyLabel="BookSellerGui.java" index="9">
 <position info="not_deleted" x="1138" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
+<item historyLabel="BookSellerAgent.java" index="5">
 <position info="not_deleted" x="1014" y="0"/>
+</item>
+<item historyLabel="BookBuyerAgent.java" index="8">
+<position info="not_deleted" x="1038" y="0"/>
+</item>
+<item historyLabel="BookSellerAgent.java" index="5">
+<position info="not_deleted" x="1014" y="0"/>
+</item>
+<item historyLabel="Ilona.java" index="10">
+<position info="not_deleted" x="130" y="0"/>
+</item>
+<item historyLabel="BookSellerAgent.java" index="5">
+<position info="not_deleted" x="3003" y="0"/>
+</item>
+<item historyLabel="BookBuyerAgent.java" index="11">
+<position info="not_deleted" x="68" y="0"/>
 </item>
 <item historyLabel="BookBuyerAgent.java" index="11">
 <position info="not_deleted" x="1038" y="0"/>
 </item>
-<item historyLabel="BookSellerAgent.java" index="8">
-<position info="not_deleted" x="1014" y="0"/>
+<item historyLabel="BrokerAgent.java" index="12">
+<position info="not_deleted" x="73" y="0"/>
 </item>
-<item historyLabel="Ilona.java" index="13">
-<position info="not_deleted" x="130" y="0"/>
+<item historyLabel="BrokerAgent.java" index="12">
+<position info="not_deleted" x="1543" y="0"/>
 </item>
-<item active="true" historyLabel="BookSellerAgent.java" index="8">
-<position info="not_deleted" x="3003" y="0"/>
+<item historyLabel="BrokerAgent.java" index="12">
+<position info="not_deleted" x="2016" y="11"/>
+</item>
+<item historyLabel="BrokerAgent.java" index="12">
+<position info="not_deleted" x="2701" y="34"/>
+</item>
+<item historyLabel="ContractNetInitiatorAgent.java" index="13">
+<position info="not_deleted" x="1101" y="0"/>
+</item>
+<item historyLabel="ContractNetResponderAgent.java" index="14">
+<position info="not_deleted" x="1101" y="0"/>
+</item>
+<item historyLabel="FIPARequestInitiatorAgent.java" index="15">
+<position info="not_deleted" x="1101" y="0"/>
+</item>
+<item historyLabel="FIPARequestResponderAgent.java" index="16">
+<position info="not_deleted" x="1101" y="0"/>
+</item>
+<item historyLabel="BrokerAgent.java" index="17">
+<position info="not_deleted" x="73" y="0"/>
+</item>
+<item historyLabel="BrokerAgent.java" index="17">
+<position info="not_deleted" x="2707" y="34"/>
+</item>
+<item historyLabel="ContractNetResponderAgent.java" index="18">
+<position info="not_deleted" x="73" y="0"/>
+</item>
+<item historyLabel="ContractNetResponderAgent.java" index="18">
+<position info="not_deleted" x="1101" y="0"/>
+</item>
+<item active="true" historyLabel="BrokerAgent.java" index="17">
+<position info="not_deleted" x="1548" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -419,6 +424,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FIPARequestResponderAgent.java" tooltip="Protocols/src/ua/protocolslab/FIPARequestResponderAgent.java">
+<persistable path="/Protocols/src/ua/protocolslab/FIPARequestResponderAgent.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FIPARequestInitiatorAgent.java" tooltip="Protocols/src/ua/protocolslab/FIPARequestInitiatorAgent.java">
+<persistable path="/Protocols/src/ua/protocolslab/FIPARequestInitiatorAgent.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContractNetResponderAgent.java" tooltip="Protocols/src/ua/protocolslab/ContractNetResponderAgent.java">
+<persistable path="/Protocols/src/ua/protocolslab/ContractNetResponderAgent.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ContractNetInitiatorAgent.java" tooltip="Protocols/src/ua/protocolslab/ContractNetInitiatorAgent.java">
+<persistable path="/Protocols/src/ua/protocolslab/ContractNetInitiatorAgent.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BrokerAgent.java" tooltip="Protocols/src/ua/protocolslab/BrokerAgent.java">
+<persistable path="/Protocols/src/ua/protocolslab/BrokerAgent.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Ilona.java" tooltip="shjdh/src/com/name/Ilona.java">
 <persistable path="/shjdh/src/com/name/Ilona.java"/>
 </file>
@@ -448,21 +468,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmploymentOntology.java" tooltip="MyOntology/src/ua/ontologylab/EmploymentOntology.java">
 <persistable path="/MyOntology/src/ua/ontologylab/EmploymentOntology.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PersonTooOld.java" tooltip="MyOntology/src/ua/ontologylab/PersonTooOld.java">
-<persistable path="/MyOntology/src/ua/ontologylab/PersonTooOld.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RequesterAgent.java" tooltip="MyOntology/src/ua/ontologylab/RequesterAgent.java">
-<persistable path="/MyOntology/src/ua/ontologylab/RequesterAgent.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="WorksFor.java" tooltip="MyOntology/src/ua/ontologylab/WorksFor.java">
-<persistable path="/MyOntology/src/ua/ontologylab/WorksFor.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Person.java" tooltip="MyOntology/src/ua/ontologylab/Person.java">
-<persistable path="/MyOntology/src/ua/ontologylab/Person.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EngagementError.java" tooltip="MyOntology/src/ua/ontologylab/EngagementError.java">
-<persistable path="/MyOntology/src/ua/ontologylab/EngagementError.java"/>
 </file>
 </mruList>
 </workbench>

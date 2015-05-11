@@ -66,9 +66,17 @@ public class BrokerAgent extends Agent {
 	  		
 			AchieveREResponder arer = new AchieveREResponder(this, template) {
 				protected ACLMessage prepareResponse(ACLMessage request) throws NotUnderstoodException, RefuseException {
-					System.out.println("Agent "+getLocalName()+": REQUEST received from "+request.getSender().getName()+". Action is "+request.getContent());
 					ACLMessage agree = request.createReply();
-					agree.setPerformative(ACLMessage.AGREE);
+					if (checkOffer())
+					{
+						System.out.println("Agent "+getLocalName()+": REQUEST received from "+request.getSender().getName()+". Action is "+request.getContent());
+						agree.setPerformative(ACLMessage.AGREE);
+					}
+					else
+					{
+						System.out.println("Agent "+getLocalName()+": REQUEST received from "+request.getSender().getName()+". Action is REJECTED. OFFER IS TOO BAD!!");
+						agree.setPerformative(ACLMessage.REJECT_PROPOSAL);
+					}
 					return agree;
 				}
 			};
@@ -141,5 +149,10 @@ public class BrokerAgent extends Agent {
   		System.out.println("No agent to forward requests to specified.");
   	}
   }
+  
+  private boolean checkOffer() {
+	  	// Simulate a check by generating a random number
+	  	return (Math.random() > 0.5);
+	  }
 }
 
