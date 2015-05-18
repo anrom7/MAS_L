@@ -22,12 +22,13 @@
  * Boston, MA  02111-1307, USA.
  * **************************************************************
  */
-package ua.protocolslab;
+package protocolslab;
 
 import jade.core.Agent;
 import jade.core.AID;
 import jade.lang.acl.ACLMessage;
 import jade.proto.AchieveREInitiator;
+import jade.wrapper.ContainerController;
 import jade.domain.FIPANames;
 
 import java.util.Date;
@@ -47,6 +48,7 @@ public class FIPARequestInitiatorAgent extends Agent {
   protected void setup() {
   	// Read names of responders as arguments
   	Object[] args = getArguments();
+  	
   	if (args != null && args.length > 0) {
   		nResponders = args.length;
   		System.out.println("Requesting dummy-action to "+nResponders+" responders.");

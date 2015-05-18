@@ -22,7 +22,7 @@
  * Boston, MA  02111-1307, USA.
  * **************************************************************
  */
-package ua.protocolslab;
+package protocolslab;
 
 import jade.core.Agent;
 import jade.core.AID;
@@ -35,6 +35,9 @@ import jade.domain.FIPAAgentManagement.NotUnderstoodException;
 import jade.domain.FIPAAgentManagement.RefuseException;
 import jade.domain.FIPAAgentManagement.FailureException;
 
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
 import java.util.Vector;
 
 /**
@@ -51,19 +54,22 @@ public class BrokerAgent extends Agent {
 	 * 
 	 */
 	private static final long serialVersionUID = -7213730789706355897L;
-	private AID responder;
-	
+//	private AID responder;
+
+	  AID responder;
+	  Object[] globalArgs;
   protected void setup() {
   	// Read the name of agent to forward requests to
   	Object[] args = getArguments();
+  	globalArgs=args;
   	if (args != null && args.length > 0) {
-  		responder = new AID((String) args[0], AID.ISLOCALNAME);
-  	
-	  	System.out.println("Agent "+getLocalName()+" waiting for requests...");
-	  	MessageTemplate template = MessageTemplate.and(
-	  		MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
-	  		MessageTemplate.MatchPerformative(ACLMessage.REQUEST) );
-	  		
+		 System.out.println("Agent "+getLocalName()+" waiting for requests...");
+  		for (int i=0;i<args.length;i++)
+  		{
+  			responder = new AID((String) args[i], AID.ISLOCALNAME);
+  		  	MessageTemplate template = MessageTemplate.and(
+  			  		MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
+  			  		MessageTemplate.MatchPerformative(ACLMessage.REQUEST) );
 			AchieveREResponder arer = new AchieveREResponder(this, template) {
 				protected ACLMessage prepareResponse(ACLMessage request) throws NotUnderstoodException, RefuseException {
 					System.out.println("Agent "+getLocalName()+": REQUEST received from "+request.getSender().getName()+". Action is "+request.getContent());
@@ -72,70 +78,76 @@ public class BrokerAgent extends Agent {
 					return agree;
 				}
 			};
-			// Register an AchieveREInitiator in the PREPARE_RESULT_NOTIFICATION state
-			arer.registerPrepareResultNotification(new AchieveREInitiator(this, null) {
-				// Since we don't know what message to send to the responder
-				// when we construct this AchieveREInitiator, we redefine this 
-				// method to build the request on the fly
-				protected Vector prepareRequests(ACLMessage request) {
-					// Retrieve the incoming request from the DataStore
-					String incomingRequestKey = (String) ((AchieveREResponder) parent).REQUEST_KEY;
-					ACLMessage incomingRequest = (ACLMessage) getDataStore().get(incomingRequestKey);
-					// Prepare the request to forward to the responder
-					System.out.println("Agent "+getLocalName()+": Forward the request to "+responder.getName());
-					ACLMessage outgoingRequest = new ACLMessage(ACLMessage.REQUEST);
-					outgoingRequest.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
-					outgoingRequest.addReceiver(responder);
-					outgoingRequest.setContent(incomingRequest.getContent());
-					outgoingRequest.setReplyByDate(incomingRequest.getReplyByDate());
-					Vector v = new Vector(1);
-					v.addElement(outgoingRequest);
-					return v;
-				}
-				
-				protected void handleInform(ACLMessage inform) {
-					storeNotification(ACLMessage.INFORM);
-				}
-				
-				protected void handleRefuse(ACLMessage refuse) {
-					storeNotification(ACLMessage.FAILURE);
-				}
-				
-				protected void handleNotUnderstood(ACLMessage notUnderstood) {
-					storeNotification(ACLMessage.FAILURE);
-				}
-				
-				protected void handleFailure(ACLMessage failure) {
-					storeNotification(ACLMessage.FAILURE);
-				}
-				
-				protected void handleAllResultNotifications(Vector notifications) {
-					if (notifications.size() == 0) {
-						// Timeout
-						storeNotification(ACLMessage.FAILURE);
-					}
-				}
-				
-				private void storeNotification(int performative) {
-					if (performative == ACLMessage.INFORM) {
-						System.out.println("Agent "+getLocalName()+": brokerage successful");
-					}
-					else {
-						System.out.println("Agent "+getLocalName()+": brokerage failed");
-					}
-						
-					// Retrieve the incoming request from the DataStore
-					String incomingRequestkey = (String) ((AchieveREResponder) parent).REQUEST_KEY;
-					ACLMessage incomingRequest = (ACLMessage) getDataStore().get(incomingRequestkey);
-					// Prepare the notification to the request originator and store it in the DataStore
-					ACLMessage notification = incomingRequest.createReply();
-					notification.setPerformative(performative);
-					String notificationkey = (String) ((AchieveREResponder) parent).RESULT_NOTIFICATION_KEY;
-					getDataStore().put(notificationkey, notification);
-				}
-			} );
 			
-			addBehaviour(arer);
+			// Register an AchieveREInitiator in the PREPARE_RESULT_NOTIFICATION state
+						arer.registerPrepareResultNotification(new AchieveREInitiator(this, null) {
+							// Since we don't know what message to send to the responder
+							// when we construct this AchieveREInitiator, we redefine this 
+							// method to build the request on the fly
+							protected Vector prepareRequests(ACLMessage request) {
+								// Retrieve the incoming request from the DataStore
+								String incomingRequestKey = (String) ((AchieveREResponder) parent).REQUEST_KEY;
+								ACLMessage incomingRequest = (ACLMessage) getDataStore().get(incomingRequestKey);
+								// Prepare the request to forward to the responder
+								Vector v = new Vector(globalArgs.length);
+								for (int j=0;j<globalArgs.length;j++)
+								{
+									AID localResponder = new AID((String) globalArgs[j], AID.ISLOCALNAME);
+									System.out.println("Agent "+getLocalName()+": Forward the request to "+localResponder.getName());
+									ACLMessage outgoingRequest = new ACLMessage(ACLMessage.REQUEST);
+									outgoingRequest.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
+									outgoingRequest.addReceiver(localResponder);
+									outgoingRequest.setContent(incomingRequest.getContent());
+									outgoingRequest.setReplyByDate(incomingRequest.getReplyByDate());
+									v.addElement(outgoingRequest);
+								}
+								return v;
+							}
+							
+							protected void handleInform(ACLMessage inform) {
+								storeNotification(ACLMessage.INFORM);
+							}
+							
+							protected void handleRefuse(ACLMessage refuse) {
+								storeNotification(ACLMessage.FAILURE);
+							}
+							
+							protected void handleNotUnderstood(ACLMessage notUnderstood) {
+								storeNotification(ACLMessage.FAILURE);
+							}
+							
+							protected void handleFailure(ACLMessage failure) {
+								storeNotification(ACLMessage.FAILURE);
+							}
+							
+							protected void handleAllResultNotifications(Vector notifications) {
+								if (notifications.size() == 0) {
+									// Timeout
+									storeNotification(ACLMessage.FAILURE);
+								}
+							}
+							
+							private void storeNotification(int performative) {
+								if (performative == ACLMessage.INFORM) {
+									System.out.println("Agent "+getLocalName()+": brokerage successful");
+								}
+								else {
+									System.out.println("Agent "+getLocalName()+": brokerage failed");
+								}
+									
+								// Retrieve the incoming request from the DataStore
+								String incomingRequestkey = (String) ((AchieveREResponder) parent).REQUEST_KEY;
+								ACLMessage incomingRequest = (ACLMessage) getDataStore().get(incomingRequestkey);
+								// Prepare the notification to the request originator and store it in the DataStore
+								ACLMessage notification = incomingRequest.createReply();
+								notification.setPerformative(performative);
+								String notificationkey = (String) ((AchieveREResponder) parent).RESULT_NOTIFICATION_KEY;
+								getDataStore().put(notificationkey, notification);
+							}
+						} );
+						
+						addBehaviour(arer);
+  		}	  				
   	}
   	else {
   		System.out.println("No agent to forward requests to specified.");

@@ -22,7 +22,7 @@
  * Boston, MA  02111-1307, USA.
  * **************************************************************
  */
-package ua.protocolslab;
+package protocolslab;
 
 import jade.core.Agent;
 import jade.lang.acl.ACLMessage;
