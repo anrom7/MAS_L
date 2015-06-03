@@ -34,6 +34,7 @@ import jade.domain.FIPANames;
 import jade.domain.FIPAAgentManagement.NotUnderstoodException;
 import jade.domain.FIPAAgentManagement.RefuseException;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 /**
@@ -46,19 +47,22 @@ import java.util.Vector;
    @author Giovanni Caire - TILAB
  */
 public class BrokerAgent extends Agent {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 3535096204846353492L;
-	private AID responder;
+	private ArrayList<AID> responderArray = new ArrayList<AID>();
+	private int responderNumber;
 	
   @SuppressWarnings("serial")
 protected void setup() {
-  	// Read the name of agent to forward requests to
+  	// Read the names of agents to forward requests to
   	Object[] args = getArguments();
-  	if (args != null && args.length > 0) {
-  		responder = new AID((String) args[0], AID.ISLOCALNAME);
-  	
+  	responderNumber = args.length;
+  	if ((args!=null) && (responderNumber> 0)) {
+  		//responder get a more responder agents
+  		
+  		for(int i=0; i<responderNumber; i++){
+  			responderArray.add(new AID((String) args[i], AID.ISLOCALNAME));
+  		}
 	  	System.out.println("Agent "+getLocalName()+" waiting for requests...");
 	  	MessageTemplate template = MessageTemplate.and(
 	  		MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
@@ -74,9 +78,7 @@ protected void setup() {
 			};
 			// Register an AchieveREInitiator in the PREPARE_RESULT_NOTIFICATION state
 			arer.registerPrepareResultNotification(new AchieveREInitiator(this, null) {
-				/**
-				 * 
-				 */
+
 				private static final long serialVersionUID = 8542928132527335612L;
 
 				// Since we don't know what message to send to the responder
@@ -84,18 +86,22 @@ protected void setup() {
 				// method to build the request on the fly
 				@SuppressWarnings({ "rawtypes", "unchecked" })
 				protected Vector prepareRequests(ACLMessage request) {
-					// Retrieve the incoming request from the DataStore
-					String incomingRequestKey = (String) ((AchieveREResponder) parent).REQUEST_KEY;
-					ACLMessage incomingRequest = (ACLMessage) getDataStore().get(incomingRequestKey);
-					// Prepare the request to forward to the responder
-					System.out.println("Agent "+getLocalName()+": Forward the request to "+responder.getName());
-					ACLMessage outgoingRequest = new ACLMessage(ACLMessage.REQUEST);
-					outgoingRequest.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
-					outgoingRequest.addReceiver(responder);
-					outgoingRequest.setContent(incomingRequest.getContent());
-					outgoingRequest.setReplyByDate(incomingRequest.getReplyByDate());
-					Vector v = new Vector(1);
-					v.addElement(outgoingRequest);
+					
+					Vector v = new Vector(2);
+					for (int i=0; i<responderNumber;i++){
+						String incomingRequestKey = (String) ((AchieveREResponder) parent).REQUEST_KEY;
+						ACLMessage incomingRequest = (ACLMessage) getDataStore().get(incomingRequestKey);
+						// Prepare the request to forward to the responder
+						System.out.println("Agent "+getLocalName()+": Forward the request to "+responderArray.get(i).getName());
+						ACLMessage outgoingRequest = new ACLMessage(ACLMessage.REQUEST);
+						outgoingRequest.setProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST);
+						outgoingRequest.addReceiver(responderArray.get(i));
+						outgoingRequest.setContent(incomingRequest.getContent());
+						outgoingRequest.setReplyByDate(incomingRequest.getReplyByDate());
+
+						v.addElement(outgoingRequest);						
+					}
+					
 					return v;
 				}
 				
