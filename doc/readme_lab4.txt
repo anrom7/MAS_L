@@ -1,0 +1,1 @@
+Changed behavior of the buyer on the composite behavior SequentialBehaviour, where buying action consists of 4 behaviors.
