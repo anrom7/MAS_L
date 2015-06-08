@@ -35,7 +35,7 @@ public class Engage implements Concept {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -9068109436457332707L;
+	private static final long serialVersionUID = -4301135448594971548L;
 	private Company	_company;							//Company engager
 	private Person	_person;							//Person engaged
 	private AID   	_actor;
@@ -53,6 +53,12 @@ public class Engage implements Concept {
 	}
 	public Company getCompany() {
 		return _company;
+	}
+	public AID getActor() {
+		return _actor;
+	}
+	public void setActor(AID _actor) {
+		this._actor = _actor;
 	}
 
 }

@@ -34,7 +34,7 @@ public class Company implements Concept {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -4425725746649136475L;
+	private static final long serialVersionUID = 7212753326718003130L;
 	private String 	_name;						//Company's name
 	private Address	_address;					//Headquarter's address
 	
@@ -54,6 +54,6 @@ public class Company implements Concept {
 	
 	// Other application specific methods
 	public boolean equals(Company c){
-		return (_name.equalsIgnoreCase(c.getName()));
+		return _name.equalsIgnoreCase(c.getName()) && c.getAddress().equals(getAddress());
 	}
 }

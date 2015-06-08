@@ -31,5 +31,5 @@ public class PersonTooOld implements Predicate {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -7538761437145455620L;
+	private static final long serialVersionUID = 4015693723543797244L;
 }

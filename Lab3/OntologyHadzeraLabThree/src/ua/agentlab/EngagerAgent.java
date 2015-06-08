@@ -42,6 +42,13 @@ import jade.proto.SimpleAchieveREResponder;
 import jade.util.leap.ArrayList;
 import jade.util.leap.Iterator;
 import jade.util.leap.List;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import education.GeographyOntologyOntology;
+import education.impl.DefaultContinent;
 import employment.Address;
 import employment.Company;
 import employment.EmploymentOntology;
@@ -65,7 +72,7 @@ public class EngagerAgent extends Agent {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -4290228792641679039L;
+	private static final long serialVersionUID = 1127356351139658706L;
 
 	// AGENT BEHAVIOURS
 	/**
@@ -76,7 +83,7 @@ public class EngagerAgent extends Agent {
 		/**
 		 * 
 		 */
-		private static final long serialVersionUID = 8602149055032899094L;
+		private static final long serialVersionUID = 7582988551953704054L;
 
 		/**
 			Constructor for the <code>HandleEnganementQueriesBehaviour</code>
@@ -162,7 +169,7 @@ public class EngagerAgent extends Agent {
   	/**
 		 * 
 		 */
-		private static final long serialVersionUID = -1029904582273446561L;
+		private static final long serialVersionUID = -7114738820853506232L;
 
 
 	/**
@@ -242,12 +249,13 @@ public class EngagerAgent extends Agent {
 				Action a = (Action)getContentManager().extractContent(request);
 				Engage e = (Engage) a.getAction();
 				Person p = e.getPerson();
-				Company c = e.getCompany();
+				// Company c = e.getCompany();
 			
 				// Check person's age. If < 35 --> AGREE, else REFUSE and exit
 				if (p.getAge().intValue() < 35){
 					// AGREE to accomplish the engagement action without any 
 					// special condition.
+					
 					ContentElementList l = new ContentElementList();
 					l.add(a);
 					l.add(new TrueProposition());
@@ -279,39 +287,59 @@ public class EngagerAgent extends Agent {
 	// AGENT CONSTRUCTOR
 	public EngagerAgent(){
 		super();
-		
-		representedCompany = new Company();
-		representedCompany.setName("CSELT");
-		Address a = new Address();
-		a.setStreet("\"Via Reiss Romoli\"");
-		a.setNumber(new Long(274));
-		a.setCity("Turin");
-		representedCompany.setAddress(a);
-		
-		employees = new ArrayList();
 	}
 	
 	// AGENT SETUP
 	protected void setup() {
-		System.out.println("This is the EngagerAgent representing the company "+representedCompany.getName());
-		
 		// Register the codec for the SL0 language
 		getContentManager().registerLanguage(new SLCodec(), FIPANames.ContentLanguage.FIPA_SL0);	
 		
 		// Register the ontology used by this application
 		getContentManager().registerOntology(EmploymentOntology.getInstance());
+		
+		// Можна додавати компанію із різними даними
+		// Це дозволяє працювати одночасно багатьом агентам
+		try {
+			BufferedReader buff = new BufferedReader(new InputStreamReader(System.in));
+			
+			System.out.print("ENTER the company name --> ");
+			String name = buff.readLine();
+		
+			representedCompany = new Company();
+			representedCompany.setName(name);
+			
+			Address a = new Address();
+			System.out.println("ENTER details of the company where people will be engaged");
+			System.out.println("  Company address");
+			System.out.print("    Street ------> ");
+			a.setStreet(buff.readLine());
+			System.out.print("    Number ------> ");
+			a.setNumber(new Long(buff.readLine()));
+			System.out.print("    City   ------> ");
+			a.setCity(buff.readLine());
+			System.out.print("    Education Type   -----> ");
+			a.setContinent(new DefaultContinent(buff.readLine()));
+			
+			representedCompany.setAddress(a);
+			
+			employees = new ArrayList();
+		} catch (IOException ioe) { 
+			System.err.println("I/O error: " + ioe.getMessage()); 
+		}
+		
+		System.out.println("This is the EngagerAgent representing the company "+representedCompany.getName());
 			
 		// Create and add the behaviour for handling QUERIES using the employment-ontology
   		addBehaviour(new HandleEnganementQueriesBehaviour(this));
   	
 		// Create and add the behaviour for handling REQUESTS using the employment-ontology
-		MessageTemplate mt = MessageTemplate.and(
+		/* MessageTemplate mt = MessageTemplate.and(
 											MessageTemplate.MatchProtocol(FIPANames.InteractionProtocol.FIPA_REQUEST),
-											MessageTemplate.MatchOntology(EmploymentOntology.NAME));
-  	HandleEnganementQueriesBehaviour b = new HandleEnganementQueriesBehaviour(this);
-  	HandleEngageBehaviour c = new HandleEngageBehaviour(this);
-  	addBehaviour(b);
-  	addBehaviour(c);
+											MessageTemplate.MatchOntology(EmploymentOntology.NAME)); */
+	  	HandleEnganementQueriesBehaviour b = new HandleEnganementQueriesBehaviour(this);
+	  	HandleEngageBehaviour c = new HandleEngageBehaviour(this);
+	  	addBehaviour(b);
+	  	addBehaviour(c);
 	}
 	
 	// AGENT METHODS
@@ -333,8 +361,9 @@ public class EngagerAgent extends Agent {
 	int doEngage(Person p, Company c){
 		if (!c.equals(representedCompany))
 			return (-1); // Can engage people on behalf of representedCompany only
-		else
+		else {
 			employees.add(p);
+		}
 		return (1);
 	}
 }

@@ -31,5 +31,5 @@ public class EngagementError implements Predicate {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -9016131721146970082L;
+	private static final long serialVersionUID = -4391003917981749407L;
 }

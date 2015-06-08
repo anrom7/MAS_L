@@ -23,6 +23,8 @@ Boston, MA  02111-1307, USA.
 
 package employment;
 
+
+import education.Continent;
 import jade.content.Concept;
 
 /**
@@ -34,10 +36,12 @@ public class Address implements Concept {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -9100095580761203025L;
+	private static final long serialVersionUID = 1451943168306649160L;
 	private String 	_street;					// Street name
 	private Long    _number;          // Street number
 	private String 	_city;						// City
+	
+	private Continent _continent;
 	
 	// Methods required to use this class to represent the ADDRESS role
 	public void setStreet(String street) {
@@ -67,6 +71,17 @@ public class Address implements Concept {
 			return false;
 		if (!_city.equalsIgnoreCase(a.getCity()))
 			return false;
+		if (!_continent.toString().equalsIgnoreCase(a.getContinent().toString())) {
+			return false;
+		}
 		return true;
+	}
+	
+	public Continent getContinent() {
+		return _continent;
+	}
+	
+	public void setContinent(Continent continent) {
+		this._continent = continent;
 	}
 }

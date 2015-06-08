@@ -1,3 +1,2 @@
-Stock project of employment ontology from examples folder was built.
-
-Added just serializible keys for classes.
+Desserialized ontology education.
+Added 1 field into agents: Education type.

@@ -23,29 +23,34 @@ Boston, MA  02111-1307, USA.
 
 package ua.agentlab;
 
-import jade.lang.acl.ACLMessage;
-
-import jade.core.*;
-import jade.core.behaviours.*;
-
-import jade.domain.FIPAException;
+import jade.content.abs.AbsContentElementList;
+import jade.content.abs.AbsObject;
+import jade.content.abs.AbsPredicate;
+import jade.content.lang.Codec;
+import jade.content.lang.sl.SLCodec;
+import jade.content.lang.sl.SLVocabulary;
+import jade.content.onto.Ontology;
+import jade.content.onto.OntologyException;
+import jade.content.onto.basic.Action;
+import jade.core.AID;
+import jade.core.Agent;
+import jade.core.behaviours.Behaviour;
+import jade.core.behaviours.SequentialBehaviour;
 import jade.domain.FIPANames;
-
+import jade.lang.acl.ACLMessage;
 import jade.proto.SimpleAchieveREInitiator;
 
-import jade.content.lang.Codec;
-import jade.content.lang.sl.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-import jade.domain.*;
-import jade.content.*;
-import jade.content.abs.*;
-import jade.content.onto.*;
-import jade.content.onto.basic.*;
-import employment.*;
-
-import java.util.Vector;
-import jade.util.leap.*;
-import java.io.*;
+import education.impl.DefaultContinent;
+import employment.Address;
+import employment.Company;
+import employment.EmploymentOntology;
+import employment.Engage;
+import employment.Person;
+import employment.WorksFor;
 
 /**
 	This agent is able to handle the engagement of people by requesting
@@ -73,7 +78,7 @@ public class RequesterAgent extends Agent {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1435895319957723547L;
+	private static final long serialVersionUID = -5786365014033315242L;
 
 
 	// AGENT BEHAVIOURS
@@ -90,7 +95,7 @@ public class RequesterAgent extends Agent {
 		/**
 		 * 
 		 */
-		private static final long serialVersionUID = -2428329657688225378L;
+		private static final long serialVersionUID = -6339522033381245391L;
 		// Local variables
 		Behaviour queryBehaviour = null;
 		Behaviour requestBehaviour = null;
@@ -126,7 +131,7 @@ public class RequesterAgent extends Agent {
 				wf.setPerson(p);
 				wf.setCompany(((RequesterAgent) myAgent).c);
 				
-				Ontology o = myAgent.getContentManager().lookupOntology(EmploymentOntology.NAME);		
+				// Ontology o = myAgent.getContentManager().lookupOntology(EmploymentOntology.NAME);		
 				// Create an ACL message to query the engager agent if the above fact is true or false
 				ACLMessage queryMsg = new ACLMessage(ACLMessage.QUERY_IF);
 				queryMsg.addReceiver(((RequesterAgent) myAgent).engager);
@@ -197,7 +202,7 @@ public class RequesterAgent extends Agent {
 		/**
 		 * 
 		 */
-		private static final long serialVersionUID = 8206741712462745403L;
+		private static final long serialVersionUID = 7698176527910000010L;
 
 		// Constructor
 		public CheckAlreadyWorkingBehaviour(Agent myAgent, ACLMessage queryMsg){
@@ -205,6 +210,7 @@ public class RequesterAgent extends Agent {
 			queryMsg.setProtocol(FIPANames.InteractionProtocol.FIPA_QUERY);
 		}
 		
+		@Override
 		protected void handleInform(ACLMessage msg) {
 			try{
 				AbsPredicate cs = (AbsPredicate)myAgent.getContentManager().extractAbsContent(msg);
@@ -273,7 +279,7 @@ public class RequesterAgent extends Agent {
 		/**
 		 * 
 		 */
-		private static final long serialVersionUID = 8903918179330669463L;
+		private static final long serialVersionUID = -324918480191659526L;
 		// Constructor
 		public RequestEngagementBehaviour(Agent myAgent, ACLMessage requestMsg){
 			super(myAgent, requestMsg);
@@ -335,7 +341,7 @@ public class RequesterAgent extends Agent {
 		
 		// Register the ontology used by this application
 		getContentManager().registerOntology(EmploymentOntology.getInstance());
-	
+		
 		// Get from the user the name of the agent the engagement requests
 		// will have to be sent to
 		try {
@@ -359,6 +365,8 @@ public class RequesterAgent extends Agent {
 			a.setNumber(new Long(buff.readLine()));
 			System.out.print("    City   ------> ");
 			a.setCity(buff.readLine());
+			System.out.print("        Education Type   ----->");
+			a.setContinent(new DefaultContinent(buff.readLine()));
 			c.setAddress(a);
 		}
 		catch (IOException ioe) { 
