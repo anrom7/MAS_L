@@ -55,6 +55,8 @@ import ua.edu.lp.cad.mas.lab3.employment.EngagementError;
 import ua.edu.lp.cad.mas.lab3.employment.Person;
 import ua.edu.lp.cad.mas.lab3.employment.PersonTooOld;
 import ua.edu.lp.cad.mas.lab3.employment.WorksFor;
+import ua.edu.lp.cad.mas.lab3.geography.GeographyOntologyOntology;
+import ua.edu.lp.cad.mas.lab3.geography.impl.DefaultContinent;
 
 /**
 	This agent is able to engage people on behalf of company 
@@ -253,6 +255,7 @@ public class EngagerAgent extends Agent {
 				if (p.getAge().intValue() < 35){
 					// AGREE to accomplish the engagement action without any 
 					// special condition.
+					
 					ContentElementList l = new ContentElementList();
 					l.add(a);
 					l.add(new TrueProposition());
@@ -314,6 +317,8 @@ public class EngagerAgent extends Agent {
 			a.setNumber(new Long(buff.readLine()));
 			System.out.print("    City   ------> ");
 			a.setCity(buff.readLine());
+			System.out.print("    Continent   -----> ");
+			a.setContinent(new DefaultContinent(buff.readLine()));
 			
 			representedCompany.setAddress(a);
 			
@@ -356,8 +361,9 @@ public class EngagerAgent extends Agent {
 	int doEngage(Person p, Company c){
 		if (!c.equals(representedCompany))
 			return (-1); // Can engage people on behalf of representedCompany only
-		else
+		else {
 			employees.add(p);
+		}
 		return (1);
 	}
 }

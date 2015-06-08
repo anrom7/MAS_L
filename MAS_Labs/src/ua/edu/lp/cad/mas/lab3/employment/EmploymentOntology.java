@@ -32,6 +32,14 @@ import jade.content.schema.ConceptSchema;
 import jade.content.schema.ObjectSchema;
 import jade.content.schema.PredicateSchema;
 import jade.content.schema.PrimitiveSchema;
+import ua.edu.lp.cad.mas.lab3.geography.Country;
+import ua.edu.lp.cad.mas.lab3.geography.JobOffOnt_Organization;
+import ua.edu.lp.cad.mas.lab3.geography.JobOffOnt_Vacancy;
+import ua.edu.lp.cad.mas.lab3.geography.JobSeeOnt_Candidacy;
+import ua.edu.lp.cad.mas.lab3.geography.JobSeeOnt_Job_Seeker;
+import ua.edu.lp.cad.mas.lab3.geography.Location;
+import ua.edu.lp.cad.mas.lab3.geography.Region;
+import ua.edu.lp.cad.mas.lab3.geography.impl.DefaultContinent;
 
 /**
    Javadoc documentation for the file EmploymentOntology
@@ -57,6 +65,7 @@ public class EmploymentOntology extends Ontology {
   public static final String ADDRESS_NAME = "street";
   public static final String ADDRESS_NUMBER = "number";
   public static final String ADDRESS_CITY = "city";
+  public static final String ADDRESS_CONTINENT = "continent";
   
   public static final String PERSON = "PERSON";
   public static final String PERSON_NAME = "name";
@@ -77,6 +86,25 @@ public class EmploymentOntology extends Ontology {
   public static final String WORKS_FOR_COMPANY = "company";
   public static final String ENGAGEMENT_ERROR = "ENGAGEMENT-ERROR";
   public static final String PERSON_TOO_OLD = "PERSON-TOO-OLD";
+  
+  public static final String JOBOFFONT_ORGANIZATION="JobOffOnt_Organization";
+  public static final String LOCATION_IS_LOCATION_OF_ORGANIZATION="is_location_of_Organization";
+  public static final String LOCATION_IS_ASSOCIATED_WITH_VACANCY="is_associated_with_Vacancy";
+  public static final String LOCATION="Location";
+  public static final String CONTINENT_HAS_COUNTRY_COUNTRY="has_country_Country";
+  public static final String CONTINENT="Continent";
+  public static final String JOBSEEONT_CANDIDACY="JobSeeOnt_Candidacy";
+  public static final String JOBSEEONT_JOB_SEEKER="JobSeeOnt_Job_Seeker";
+  public static final String REGION_IS_LOCATED_IN_COUNTRY="is_located_in_Country";
+  public static final String REGION="Region";
+  public static final String JOBOFFONT_VACANCY="JobOffOnt_Vacancy";
+  public static final String COUNTRY_IS_LOCATED_IN_CONTINENT="is_located_in_Continent";
+  public static final String COUNTRY_IS_NATION_OF_CANDIDACY="is_nation_of_Candidacy";
+  public static final String COUNTRY_HAS_REGION_REGION="has_region_Region";
+  public static final String COUNTRY_IS_RESIDENCE_OF_JOB_SEEKER="is_residence_of_Job_Seeker";
+  public static final String COUNTRY="Country";
+  
+  public static final String CONTINENT_NAME = "name";
   
   private static Ontology theInstance = new EmploymentOntology();
 	
@@ -102,6 +130,26 @@ public class EmploymentOntology extends Ontology {
 		add(new ConceptSchema(ADDRESS), Address.class);
 		add(new ConceptSchema(PERSON), Person.class);
 		add(new ConceptSchema(COMPANY), Company.class);
+		
+		ConceptSchema countrySchema = new ConceptSchema(COUNTRY);
+	    add(countrySchema, Country.class);
+	    ConceptSchema jobOffOnt_VacancySchema = new ConceptSchema(JOBOFFONT_VACANCY);
+	    add(jobOffOnt_VacancySchema, JobOffOnt_Vacancy.class);
+	    ConceptSchema regionSchema = new ConceptSchema(REGION);
+	    add(regionSchema, Region.class);
+	    ConceptSchema jobSeeOnt_Job_SeekerSchema = new ConceptSchema(JOBSEEONT_JOB_SEEKER);
+	    add(jobSeeOnt_Job_SeekerSchema, JobSeeOnt_Job_Seeker.class);
+	    ConceptSchema jobSeeOnt_CandidacySchema = new ConceptSchema(JOBSEEONT_CANDIDACY);
+	    add(jobSeeOnt_CandidacySchema, JobSeeOnt_Candidacy.class);
+	    ConceptSchema locationSchema = new ConceptSchema(LOCATION);
+	    add(locationSchema, Location.class);
+	    ConceptSchema jobOffOnt_OrganizationSchema = new ConceptSchema(JOBOFFONT_ORGANIZATION);
+	    add(jobOffOnt_OrganizationSchema, JobOffOnt_Organization.class);
+
+	    ConceptSchema continentSchema = new ConceptSchema(CONTINENT);
+	    add(continentSchema, DefaultContinent.class);
+	    continentSchema.add(CONTINENT_NAME, (PrimitiveSchema)getSchema(BasicOntology.STRING));
+		
 		add(new PredicateSchema(WORKS_FOR), WorksFor.class);
 		add(new PredicateSchema(PERSON_TOO_OLD), PersonTooOld.class);
 		add(new PredicateSchema(ENGAGEMENT_ERROR), EngagementError.class);
@@ -111,6 +159,7 @@ public class EmploymentOntology extends Ontology {
 		cs.add(ADDRESS_NAME, (PrimitiveSchema)getSchema(BasicOntology.STRING));
 		cs.add(ADDRESS_NUMBER, (PrimitiveSchema)getSchema(BasicOntology.INTEGER), ObjectSchema.OPTIONAL);
 		cs.add(ADDRESS_CITY, (PrimitiveSchema)getSchema(BasicOntology.STRING), ObjectSchema.OPTIONAL);
+		cs.add(ADDRESS_CONTINENT, continentSchema, ObjectSchema.OPTIONAL);
     	
     	cs = (ConceptSchema)getSchema(PERSON);
     	cs.add(PERSON_NAME, (PrimitiveSchema)getSchema(BasicOntology.STRING));
@@ -128,6 +177,22 @@ public class EmploymentOntology extends Ontology {
 		AgentActionSchema as = (AgentActionSchema)getSchema(ENGAGE);
 		as.add(ENGAGE_PERSON, (ConceptSchema)getSchema(PERSON));
 		as.add(ENGAGE_COMPANY, (ConceptSchema)getSchema(COMPANY)); 	
+		
+		countrySchema.add(COUNTRY_IS_RESIDENCE_OF_JOB_SEEKER, jobSeeOnt_Job_SeekerSchema, 0, ObjectSchema.UNLIMITED);
+	    countrySchema.add(COUNTRY_HAS_REGION_REGION, regionSchema, 0, ObjectSchema.UNLIMITED);
+	    countrySchema.add(COUNTRY_IS_NATION_OF_CANDIDACY, jobSeeOnt_CandidacySchema, 0, ObjectSchema.UNLIMITED);
+	    countrySchema.add(COUNTRY_IS_LOCATED_IN_CONTINENT, continentSchema, 0, ObjectSchema.UNLIMITED);
+	    regionSchema.add(REGION_IS_LOCATED_IN_COUNTRY, countrySchema, 0, ObjectSchema.UNLIMITED);
+	    continentSchema.add(CONTINENT_HAS_COUNTRY_COUNTRY, countrySchema, 0, ObjectSchema.UNLIMITED);
+	    locationSchema.add(LOCATION_IS_ASSOCIATED_WITH_VACANCY, jobOffOnt_VacancySchema, 0, ObjectSchema.UNLIMITED);
+	    locationSchema.add(LOCATION_IS_LOCATION_OF_ORGANIZATION, jobOffOnt_OrganizationSchema, 0, ObjectSchema.UNLIMITED);
+
+	    // adding name mappings
+
+	    // adding inheritance
+	    countrySchema.addSuperSchema(locationSchema);
+	    regionSchema.addSuperSchema(locationSchema);
+	    continentSchema.addSuperSchema(locationSchema);
     }
     catch(OntologyException oe) {
       oe.printStackTrace();

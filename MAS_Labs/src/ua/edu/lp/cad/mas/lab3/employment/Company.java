@@ -54,6 +54,6 @@ public class Company implements Concept {
 	
 	// Other application specific methods
 	public boolean equals(Company c){
-		return (_name.equalsIgnoreCase(c.getName()));
+		return _name.equalsIgnoreCase(c.getName()) && c.getAddress().equals(getAddress());
 	}
 }

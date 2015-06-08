@@ -50,6 +50,7 @@ import ua.edu.lp.cad.mas.lab3.employment.EmploymentOntology;
 import ua.edu.lp.cad.mas.lab3.employment.Engage;
 import ua.edu.lp.cad.mas.lab3.employment.Person;
 import ua.edu.lp.cad.mas.lab3.employment.WorksFor;
+import ua.edu.lp.cad.mas.lab3.geography.impl.DefaultContinent;
 
 /**
 	This agent is able to handle the engagement of people by requesting
@@ -340,7 +341,7 @@ public class RequesterAgent extends Agent {
 		
 		// Register the ontology used by this application
 		getContentManager().registerOntology(EmploymentOntology.getInstance());
-	
+		
 		// Get from the user the name of the agent the engagement requests
 		// will have to be sent to
 		try {
@@ -364,6 +365,8 @@ public class RequesterAgent extends Agent {
 			a.setNumber(new Long(buff.readLine()));
 			System.out.print("    City   ------> ");
 			a.setCity(buff.readLine());
+			System.out.print("    Continent   -----> ");
+			a.setContinent(new DefaultContinent(buff.readLine()));
 			c.setAddress(a);
 		}
 		catch (IOException ioe) { 

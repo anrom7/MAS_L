@@ -23,6 +23,7 @@ Boston, MA  02111-1307, USA.
 
 package ua.edu.lp.cad.mas.lab3.employment;
 
+import ua.edu.lp.cad.mas.lab3.geography.Continent;
 import jade.content.Concept;
 
 /**
@@ -38,6 +39,8 @@ public class Address implements Concept {
 	private String 	_street;					// Street name
 	private Long    _number;          // Street number
 	private String 	_city;						// City
+	
+	private Continent _continent;
 	
 	// Methods required to use this class to represent the ADDRESS role
 	public void setStreet(String street) {
@@ -67,6 +70,17 @@ public class Address implements Concept {
 			return false;
 		if (!_city.equalsIgnoreCase(a.getCity()))
 			return false;
+		if (!_continent.toString().equalsIgnoreCase(a.getContinent().toString())) {
+			return false;
+		}
 		return true;
+	}
+	
+	public Continent getContinent() {
+		return _continent;
+	}
+	
+	public void setContinent(Continent continent) {
+		this._continent = continent;
 	}
 }
