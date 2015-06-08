@@ -1,0 +1,17 @@
+﻿Сборка начата 08.06.2015 12:18:40.
+     1>Проект "C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\GameOfLife.vcxproj" в узле 2 (целевые объекты Build).
+     1>Link:
+         GameOfLife.vcxproj -> C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\..\..\bin\x64\Debug_Visualisation\GameOfLife.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Visualisation\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Visualisation\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Visualisation\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
+         Скопировано файлов:         2.
+     1>Сборка проекта "C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\GameOfLife.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:00.12

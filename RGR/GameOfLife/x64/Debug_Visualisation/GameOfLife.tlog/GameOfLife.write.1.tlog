@@ -1,0 +1,7 @@
+^src\model\XMLModelFile.xml
+C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\src\dynamic\header.h
+C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\src\dynamic\FLAMEGPU_kernals.cu
+C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\src\dynamic\io.cu
+C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\src\dynamic\simulation.cu
+C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\src\dynamic\main.cu
+C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\GameOfLife\src\dynamic\visualisation.cu
