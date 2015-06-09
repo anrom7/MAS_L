@@ -1,0 +1,17 @@
+﻿Build started 6/9/2015 1:43:25 AM.
+     1>Project "C:\FLAMEGPU-1.4\examples\Keratinocyte\Keratinocyte.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         Keratinocyte.vcxproj -> C:\FLAMEGPU-1.4\examples\Keratinocyte\..\..\bin\x64\Debug_Visualisation\Keratinocyte.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Visualisation\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Visualisation\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Visualisation\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
+                 2 file(s) copied.
+     1>Done Building Project "C:\FLAMEGPU-1.4\examples\Keratinocyte\Keratinocyte.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.23

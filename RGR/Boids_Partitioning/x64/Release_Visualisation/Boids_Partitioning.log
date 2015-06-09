@@ -1,0 +1,17 @@
+﻿Build started 6/9/2015 1:15:06 AM.
+     1>Project "C:\FLAMEGPU-1.4\examples\Boids_Partitioning\Boids_Partitioning.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         Boids_Partitioning.vcxproj -> C:\FLAMEGPU-1.4\examples\Boids_Partitioning\..\..\bin\x64\Release_Visualisation\Boids_Partitioning.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Release_Visualisation\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Release_Visualisation\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Release_Visualisation\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
+                 2 file(s) copied.
+     1>Done Building Project "C:\FLAMEGPU-1.4\examples\Boids_Partitioning\Boids_Partitioning.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.19

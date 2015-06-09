@@ -1,0 +1,77 @@
+﻿Build started 6/9/2015 1:33:38 AM.
+     1>Project "C:\FLAMEGPU-1.4\examples\Keratinocyte\Keratinocyte.vcxproj" on node 2 (Build target(s)).
+     1>_FLAMEGPU_Template_Build_Rule:
+         Generating Dynamic Code from FLAMEGPU Templates
+         cmd.exe /C "C:\Users\Andriy\AppData\Local\Temp\tmpd45f6804c1814c208a6e7afa18d0b09a.cmd"
+         "..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\header.xslt" ".\src\dynamic\\header.h" 
+           "..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\FLAMEGPU_kernals.xslt" ".\src\dynamic\\FLAMEGPU_kernals.cu" 
+           "..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\io.xslt" ".\src\dynamic\\io.cu" 
+           "..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\simulation.xslt" ".\src\dynamic\\simulation.cu" 
+           "..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\main.xslt" ".\src\dynamic\\main.cu" 
+           "..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\visualisation.xslt" ".\src\dynamic\\visualisation.cu" 
+         
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\header.xslt" ".\src\dynamic\\header.h"  
+         XSLT Transformation: XML File -> C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml, XSLT File -> ..\..\FLAMEGPU\templates\\header.xslt, Output File -> .\src\dynamic\\header.h : Success...
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\FLAMEGPU_kernals.xslt" ".\src\dynamic\\FLAMEGPU_kernals.cu"  
+         XSLT Transformation: XML File -> C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml, XSLT File -> ..\..\FLAMEGPU\templates\\FLAMEGPU_kernals.xslt, Output File -> .\src\dynamic\\FLAMEGPU_kernals.cu : Success...
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\io.xslt" ".\src\dynamic\\io.cu"  
+         XSLT Transformation: XML File -> C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml, XSLT File -> ..\..\FLAMEGPU\templates\\io.xslt, Output File -> .\src\dynamic\\io.cu : Success...
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\simulation.xslt" ".\src\dynamic\\simulation.cu"  
+         XSLT Transformation: XML File -> C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml, XSLT File -> ..\..\FLAMEGPU\templates\\simulation.xslt, Output File -> .\src\dynamic\\simulation.cu : Success...
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\main.xslt" ".\src\dynamic\\main.cu"  
+         XSLT Transformation: XML File -> C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml, XSLT File -> ..\..\FLAMEGPU\templates\\main.xslt, Output File -> .\src\dynamic\\main.cu : Success...
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"..\..\tools\XSLTProcessor" "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml" "..\..\FLAMEGPU\templates\\visualisation.xslt" ".\src\dynamic\\visualisation.cu"  
+         XSLT Transformation: XML File -> C:\FLAMEGPU-1.4\examples\Keratinocyte\src\model\XMLModelFile.xml, XSLT File -> ..\..\FLAMEGPU\templates\\visualisation.xslt, Output File -> .\src\dynamic\\visualisation.cu : Success...
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /I..\..\include /I.\src /I.\src\model /I.\src\dynamic /I.\src\visualisation /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I..\..\include /I.\src /I.\src\model /I.\src\dynamic /I.\src\visualisation /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\io.cu 
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /I..\..\include /I.\src /I.\src\model /I.\src\dynamic /I.\src\visualisation /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I..\..\include /I.\src /I.\src\model /I.\src\dynamic /I.\src\visualisation /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\main.cu 
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /I..\..\include /I.\src /I.\src\model /I.\src\dynamic /I.\src\visualisation /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I..\..\include /I.\src /I.\src\model /I.\src\dynamic /I.\src\visualisation /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\simulation.cu 
+       CudaBuild:
+         Compiling CUDA source file src\dynamic\io.cu...
+         cmd.exe /C "C:\Users\Andriy\AppData\Local\Temp\tmp8e82c28a69d94f3f8a93136803bd52b4.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" -gencode=arch=compute_30,code=\"sm_30,compute_30\" -gencode=arch=compute_35,code=\"sm_35,compute_35\" -gencode=arch=compute_50,code=\"sm_50,compute_50\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G -lineinfo  --keep-dir x64\Debug_Console -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug_Console\io.cu.obj "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\io.cu"
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" -gencode=arch=compute_30,code=\"sm_30,compute_30\" -gencode=arch=compute_35,code=\"sm_35,compute_35\" -gencode=arch=compute_50,code=\"sm_50,compute_50\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G -lineinfo  --keep-dir x64\Debug_Console -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug_Console\io.cu.obj "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\io.cu" 
+         io.cu
+       CudaBuild:
+         Compiling CUDA source file src\dynamic\main.cu...
+         cmd.exe /C "C:\Users\Andriy\AppData\Local\Temp\tmpda55feaf12df4dbea2416b130db223df.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" -gencode=arch=compute_30,code=\"sm_30,compute_30\" -gencode=arch=compute_35,code=\"sm_35,compute_35\" -gencode=arch=compute_50,code=\"sm_50,compute_50\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G -lineinfo  --keep-dir x64\Debug_Console -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug_Console\main.cu.obj "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\main.cu"
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" -gencode=arch=compute_30,code=\"sm_30,compute_30\" -gencode=arch=compute_35,code=\"sm_35,compute_35\" -gencode=arch=compute_50,code=\"sm_50,compute_50\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G -lineinfo  --keep-dir x64\Debug_Console -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug_Console\main.cu.obj "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\main.cu" 
+         main.cu
+       CudaBuild:
+         Compiling CUDA source file src\dynamic\simulation.cu...
+         cmd.exe /C "C:\Users\Andriy\AppData\Local\Temp\tmpe2b0a49c2cbe42bdbac24a1bb8bc74a5.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" -gencode=arch=compute_30,code=\"sm_30,compute_30\" -gencode=arch=compute_35,code=\"sm_35,compute_35\" -gencode=arch=compute_50,code=\"sm_50,compute_50\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G -lineinfo  --keep-dir x64\Debug_Console -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug_Console\simulation.cu.obj "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\simulation.cu"
+         
+         C:\FLAMEGPU-1.4\examples\Keratinocyte>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" -gencode=arch=compute_30,code=\"sm_30,compute_30\" -gencode=arch=compute_35,code=\"sm_35,compute_35\" -gencode=arch=compute_50,code=\"sm_50,compute_50\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I..\..\include -I.\src -I.\src\model -I.\src\dynamic -I.\src\visualisation -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G -lineinfo  --keep-dir x64\Debug_Console -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MTd  " -o x64\Debug_Console\simulation.cu.obj "C:\FLAMEGPU-1.4\examples\Keratinocyte\src\dynamic\simulation.cu" 
+         simulation.cu
+       CudaBuild:
+         Skipping CUDA source file src\dynamic\visualisation.cu (excluded from build).
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"..\..\bin\x64\Debug_Console\Keratinocyte.exe" /INCREMENTAL /NOLOGO /LIBPATH:../../lib/ /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\x64" /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\x64" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\..\bin\x64\Debug_Console\Keratinocyte.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"..\..\bin\x64\Debug_Console\Keratinocyte.lib" /MACHINE:X64 x64\Debug_Console\io.cu.obj
+         x64\Debug_Console\main.cu.obj
+         x64\Debug_Console\simulation.cu.obj
+         Keratinocyte.vcxproj -> C:\FLAMEGPU-1.4\examples\Keratinocyte\..\..\bin\x64\Debug_Console\Keratinocyte.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Console\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Console\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Console\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
+                 2 file(s) copied.
+     1>Done Building Project "C:\FLAMEGPU-1.4\examples\Keratinocyte\Keratinocyte.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:03:35.80
