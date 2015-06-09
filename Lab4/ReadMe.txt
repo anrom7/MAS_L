@@ -1,0 +1,2 @@
+Модифікація прикладу Book Traiding.
+Використано Parallel behaviour для реалізації поведінки BookSeller агента так, щобы циклічні поведінки PurchaseOrdersServer та OfferRequestsServer виконуються паралельно.
