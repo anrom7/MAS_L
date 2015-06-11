@@ -1,0 +1,12 @@
+package ua.agentlab3.skillontology;
+
+
+
+/**
+* Protege name: http://mccarthy.dia.fi.upm.es/Skill_Ontology#Budget_responsibility
+* @author OntologyBeanGenerator v4.1
+* @version 2015/06/10, 23:36:36
+*/
+public interface Budget_responsibility extends Organisational_Skill {
+
+}

@@ -1,0 +1,2 @@
+- Added SkillOntology
+- Added a field "Artistic skill" to the EmploymentOntology 
