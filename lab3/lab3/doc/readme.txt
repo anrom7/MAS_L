@@ -1,0 +1,2 @@
+На цій лабораторній роботі я навчився генерувати онтології з ovl файлу, модифікував агенти RequesterAgent і EngagerAgent, змінив онтологію на jobofferontology.
+In this lab. work i generated ontologies from ovl file
