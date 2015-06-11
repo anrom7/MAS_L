@@ -23,6 +23,8 @@ Boston, MA  02111-1307, USA.
 
 package com.multiagent.employment;
 
+import com.multiagent.educationontology.Education;
+
 import jade.content.Predicate;
 
 /**
@@ -31,9 +33,14 @@ import jade.content.Predicate;
 */
 public class Person implements Predicate {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2594506889957250963L;
 	private String 	_name;						//Person's name
 	private Long    _age;							//Person's age
 	private Address _address;					//Address' age
+	private Education _education;
 	
 	// Methods required to use this class to represent the PERSON role
 	public void setName(String name) {
@@ -66,5 +73,12 @@ public class Person implements Predicate {
 			if (!_address.equals(p.getAddress()))
 				return false;
 		return true;
+	}
+	public void setEducation(Education education) {
+		_education = education;
+	}
+	
+	public Education getEducation(){
+		return _education;
 	}
 }
