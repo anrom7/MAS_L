@@ -40,7 +40,7 @@ public class Person implements Predicate {
 	private String 	_name;						//Person's name
 	private Long    _age;							//Person's age
 	private Address _address;					//Address' age
-	private Education _education;
+
 	
 	// Methods required to use this class to represent the PERSON role
 	public void setName(String name) {
@@ -74,11 +74,5 @@ public class Person implements Predicate {
 				return false;
 		return true;
 	}
-	public void setEducation(Education education) {
-		_education = education;
-	}
-	
-	public Education getEducation(){
-		return _education;
-	}
+
 }

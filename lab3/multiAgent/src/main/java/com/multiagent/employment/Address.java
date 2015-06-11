@@ -23,6 +23,8 @@ Boston, MA  02111-1307, USA.
 
 package com.multiagent.employment;
 
+import com.multiagent.educationontology.Education;
+
 import jade.content.Concept;
 
 /**
@@ -31,9 +33,14 @@ import jade.content.Concept;
 */
 public class Address implements Concept {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String 	_street;					// Street name
 	private Long    _number;          // Street number
 	private String 	_city;						// City
+	private Education _education;
 	
 	// Methods required to use this class to represent the ADDRESS role
 	public void setStreet(String street) {
@@ -64,5 +71,12 @@ public class Address implements Concept {
 		if (!_city.equalsIgnoreCase(a.getCity()))
 			return false;
 		return true;
+	}
+	public void setEducation(Education education) {
+		_education = education;
+	}
+	
+	public Education getEducation(){
+		return _education;
 	}
 }
