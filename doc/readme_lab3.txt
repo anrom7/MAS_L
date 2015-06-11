@@ -1,0 +1,1 @@
+Added new field from EconomicActivityOntology. Named it "Person Economic Activity".
