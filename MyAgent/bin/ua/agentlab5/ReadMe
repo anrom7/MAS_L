@@ -1,0 +1,3 @@
+змінено метод з prepareResponse на handleRequest, тому що prepareResponse є застралілим
+змінено замість trow exeption при відмові повертається відповідий performative в методах handleRequest і prepareResultNotification
+змінено імітацію перевірки 
