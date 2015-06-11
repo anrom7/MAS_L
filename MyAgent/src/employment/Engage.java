@@ -32,10 +32,6 @@ import jade.core.AID;
 */
 public class Engage implements Concept {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -9068109436457332707L;
 	private Company	_company;							//Company engager
 	private Person	_person;							//Person engaged
 	private AID   	_actor;

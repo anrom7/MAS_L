@@ -27,16 +27,4 @@ package employment;
 import jade.content.Predicate;
 
 public class PersonTooOld implements Predicate {
-	private Person	_person;
-
-	private static final long serialVersionUID = -7538761437145455620L;
-	
-	//These methods are used by the JADE-framework
-	public void setPerson(Person person) {
-		_person=person;
-	}
-	public Person getPerson() {
-		return _person;
-	}
-	
 }

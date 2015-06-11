@@ -31,10 +31,6 @@ import jade.content.Predicate;
 */
 public class Person implements Predicate {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2350621775173299483L;
 	private String 	_name;						//Person's name
 	private Long    _age;							//Person's age
 	private Address _address;					//Address' age

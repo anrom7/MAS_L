@@ -31,10 +31,6 @@ import jade.content.Concept;
 */
 public class Company implements Concept {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -4425725746649136475L;
 	private String 	_name;						//Company's name
 	private Address	_address;					//Headquarter's address
 	

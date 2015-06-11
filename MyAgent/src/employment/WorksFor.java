@@ -31,10 +31,6 @@ import jade.content.Predicate;
 */
 public class WorksFor implements Predicate {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 8902975186833913393L;
 	private Company	_company;							//Company employer
 	private Person	_person;							//Person employee
 	

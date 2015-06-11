@@ -26,6 +26,7 @@ package employment;
 
 import jade.content.onto.*;
 import jade.content.schema.*;
+import java.util.*;
 
 /**
    Javadoc documentation for the file EmploymentOntology
@@ -36,11 +37,6 @@ import jade.content.schema.*;
 public class EmploymentOntology extends Ontology {
 
   /**
-	 * 
-	 */
-	private static final long serialVersionUID = 8165678377165961702L;
-
-/**
     A symbolic constant, containing the name of this ontology.
    */
   public static final String NAME = "employment-ontology";
@@ -51,6 +47,7 @@ public class EmploymentOntology extends Ontology {
   public static final String ADDRESS_NAME = "street";
   public static final String ADDRESS_NUMBER = "number";
   public static final String ADDRESS_CITY = "city";
+  public static final String ADDRESS_COUNTRY = "country";
   
   public static final String PERSON = "PERSON";
   public static final String PERSON_NAME = "name";
@@ -71,6 +68,8 @@ public class EmploymentOntology extends Ontology {
   public static final String WORKS_FOR_COMPANY = "company";
   public static final String ENGAGEMENT_ERROR = "ENGAGEMENT-ERROR";
   public static final String PERSON_TOO_OLD = "PERSON-TOO-OLD";
+  public static final String PERSON_TOO_YOUNG = "PERSON-TOO-YOUNG";
+  public static final String BAD_COUNTRY = "BAD-COUNTRY";
   
   private static Ontology theInstance = new EmploymentOntology();
 	
@@ -98,6 +97,8 @@ public class EmploymentOntology extends Ontology {
 		add(new ConceptSchema(COMPANY), Company.class);
 		add(new PredicateSchema(WORKS_FOR), WorksFor.class);
 		add(new PredicateSchema(PERSON_TOO_OLD), PersonTooOld.class);
+		add(new PredicateSchema(PERSON_TOO_YOUNG), PersonTooYoung.class);
+		add(new PredicateSchema(BAD_COUNTRY), BadCountry.class);
 		add(new PredicateSchema(ENGAGEMENT_ERROR), EngagementError.class);
 		add(new AgentActionSchema(ENGAGE), Engage.class);
 		
@@ -105,6 +106,7 @@ public class EmploymentOntology extends Ontology {
 		cs.add(ADDRESS_NAME, (PrimitiveSchema)getSchema(BasicOntology.STRING));
 		cs.add(ADDRESS_NUMBER, (PrimitiveSchema)getSchema(BasicOntology.INTEGER), ObjectSchema.OPTIONAL);
 		cs.add(ADDRESS_CITY, (PrimitiveSchema)getSchema(BasicOntology.STRING), ObjectSchema.OPTIONAL);
+		cs.add(ADDRESS_COUNTRY, (PrimitiveSchema)getSchema(BasicOntology.STRING), ObjectSchema.OPTIONAL);
     	
     	cs = (ConceptSchema)getSchema(PERSON);
     	cs.add(PERSON_NAME, (PrimitiveSchema)getSchema(BasicOntology.STRING));

@@ -1,2 +1,13 @@
-/employment/
 /ua/
+/employment/
+/lab3/
+/ontologyServer/
+/EngagerAgent$HandleEngageBehaviour.class
+/EngagerAgent$HandleEnganementQueriesBehaviour.class
+/EngagerAgent.class
+/RequesterAgent$CheckAlreadyWorkingBehaviour.class
+/RequesterAgent$HandleEngagementBehaviour.class
+/RequesterAgent$RequestEngagementBehaviour.class
+/RequesterAgent.class
+/onto/
+/occupationontology/

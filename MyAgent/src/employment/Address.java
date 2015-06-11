@@ -31,13 +31,10 @@ import jade.content.Concept;
 */
 public class Address implements Concept {
 	
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -9100095580761203025L;
 	private String 	_street;					// Street name
 	private Long    _number;          // Street number
 	private String 	_city;						// City
+	private String 	_country;
 	
 	// Methods required to use this class to represent the ADDRESS role
 	public void setStreet(String street) {
@@ -58,6 +55,12 @@ public class Address implements Concept {
 	public String getCity() {
 		return _city;
 	}
+	public void setCountry(String country) {
+		_country=country;
+	}
+	public String getCountry() {
+		return _country;
+	}
 	
 	// Other application specific methods
 	public boolean equals(Address a){
@@ -66,6 +69,8 @@ public class Address implements Concept {
 		if (_number.longValue() != a.getNumber().longValue())
 			return false;
 		if (!_city.equalsIgnoreCase(a.getCity()))
+			return false;
+		if (!_country.equalsIgnoreCase(a.getCountry()))
 			return false;
 		return true;
 	}
