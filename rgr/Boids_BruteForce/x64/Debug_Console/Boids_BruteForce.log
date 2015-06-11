@@ -1,0 +1,19 @@
+﻿Сборка начата 03.06.2015 23:59:17.
+     1>Проект "C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\Boids_BruteForce\Boids_BruteForce.vcxproj" в узле 2 (целевые объекты Build).
+     1>CudaBuild:
+         Skipping CUDA source file src\dynamic\visualisation.cu (excluded from build).
+       Link:
+         Boids_BruteForce.vcxproj -> C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\Boids_BruteForce\..\..\bin\x64\Debug_Console\Boids_BruteForce.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Console\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Console\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "..\..\bin\x64\Debug_Console\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
+         Скопировано файлов:         2.
+     1>Сборка проекта "C:\Users\Vsevolod\Desktop\FLAMEGPU-master\examples\Boids_BruteForce\Boids_BruteForce.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:00.14
