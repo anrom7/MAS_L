@@ -1,0 +1,5 @@
+-I was convert format of the ontology to ttl owl (You can use the Protege Version 5.0)
+-Open in Protege ontology
+-In the tab to import metadata ontology OWLSimpleJADEAbstractOntology the project
+- And  generated files in Ontology Bean Generator.
+- Add generated LanguageOntology classes to example project
